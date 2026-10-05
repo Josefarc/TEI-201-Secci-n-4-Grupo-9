@@ -1,9 +1,10 @@
 ### Información del Equipo
 - **Integrantes:**
-  -aaa
-  - bbb
-  - Nombre 3 - Rol 3
-  - Nombre 4 - Rol 4
+  - Beatriz Chaparro I
+  - Miguel Colín M
+  - Benjamín Gil R
+  - Josefa Ramírez C
+  - Alfred Tamm V
   
 - **ODS Seleccionado:** [Número y nombre]
 - **Problema a resolver:** [Descripción breve]
