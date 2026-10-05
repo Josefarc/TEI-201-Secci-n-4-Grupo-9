@@ -1,7 +1,7 @@
 ### Información del Equipo
 - **Integrantes:**
   -aaa
-  - Nombre 2 - Rol 2
+  - bbb
   - Nombre 3 - Rol 3
   - Nombre 4 - Rol 4
   
