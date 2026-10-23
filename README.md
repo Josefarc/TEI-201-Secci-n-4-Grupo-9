@@ -19,20 +19,20 @@ Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de m
 
 
 ### Estado del Proyecto
-- **Versión actual:** v3.0
+- **Versión actual:** v1.0
 - **Última actualización:** [Fecha]
-- **Estado:** Prototipo final
+- **Estado:** Prototipo funcional: El mat y el control se comunican, el control funciona con batería.
 
 ---
 
 ##  Estructura del Repositorio
 ```
-├── hardware/          # Circuitos, esquemas y BOM
-├── software/          # Código Arduino y librerías
-├── diseno_3d/        # Modelos Fusion 360 y renders
-├── testing/          # Validación con usuarios
-├── documentacion/    # Reportes y presentación
-└── iteraciones/      # Historial de versiones
+├── hardware/         # Esquemas, lista de materiales (BOM) y diagramas de conexión
+├── software/         # Código Arduino (mat, control, calibración, lectura de MAC)
+├── diseno_3d/        # Scripts de Fusion 360 (carcasa del control y mat) y renders
+├── testing/          # Pruebas, problemas encontrados y soluciones
+├── documentacion/    # Informes y presentaciones
+└── iteraciones/      # Evidencia del desarrollo y cambios del diseño
 ```
 
 ---
