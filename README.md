@@ -20,7 +20,7 @@ Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de m
 
 ### Estado del Proyecto
 - **Versión actual:** v1.0
-- **Última actualización:** [Fecha]
+- **Última actualización:** 23-10-2026
 - **Estado:** Prototipo funcional: El mat y el control se comunican, el control funciona con batería.
 
 ---
@@ -32,8 +32,8 @@ Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de m
 ├── diseno_3d/        # Scripts de Fusion 360 (carcasa del control y mat) y renders
 ├── testing/          # Pruebas, problemas encontrados y soluciones
 ├── documentacion/    # Informes y presentaciones
-└── iteraciones/      # Evidencia del desarrollo y cambios del diseño
-```
+├── iteraciones/      # Evidencia del desarrollo y cambios del diseño
+└── FUENTES.md       # Bibliografía, datasheets y librerías utilizadas
 
 ---
 
@@ -45,17 +45,19 @@ Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de m
 - [Otras herramientas necesarias]
 
 ### Instalación
-1. Clonar el repositorio
-2. Instalar librerías (ver `software/librerias/`)
-3. Cargar código en ESP32/Arduino
-4. [Pasos adicionales]
+1. Clonar el repositorio (por ejemplo, con GitHub Desktop).
+2. Instalar las librerías indicadas en `FUENTES.md`.
+3. En Arduino IDE, elegir la placa `LOLIN(WEMOS) D1 R2 & mini`.
+4. Leer la MAC de cada placa con `software/mac/` y escribirla en el código contrario (`macControl` en el mat, `macMat` en el control).
+5. Cargar `software/mat/` en el Wemos D1 y `software/control/` en el Wemos D1 Mini.
+6. Calibrar con `software/calibracion/` y ajustar `FACTOR_ESCALA` y `UMBRAL_KG` en el código del mat.
 
 ---
 
 ##  Checklist de Entrega
 
 ### Hardware ✓
-- [ ] Esquema del circuito (Fritzing/Wokwi)
+- [ ] Esquema del circuito (diagramas de conexión del mat y del control)
 - [ ] BOM completo
 - [ ] Fotos de alta resolución
 
