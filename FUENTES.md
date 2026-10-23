@@ -19,9 +19,9 @@
 | HX711 | Datasheet, Avia Semiconductor | https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/hx711_english.pdf |
 | ESP-NOW | Descripción del protocolo, Espressif | https://www.espressif.com/en/products/software/esp-now/overview |
 | Wemos D1 Mini | Documentación de la placa | https://www.wemos.cc/en/latest/d1/d1_mini.html |
-| Transistor 2N2222 | Datasheet del fabricante | [agregar enlace] |
-| Módulo UPS con batería 18650 | Ficha del vendedor | [agregar enlace de la tienda] |
-| Celdas de carga 50 kg | Ficha del vendedor | [agregar enlace de la tienda] |
+| Transistor 2N2222 | Datasheet del fabricante | https://hubot.cl/producto/transistor-2n2222-to-92-sku-668h3/ |
+| Módulo UPS con batería 18650 | Ficha del vendedor | https://hubot.cl/producto/modulo-cargador-usb-para-bateria-18650-v3-para-mcu-sku-672/ |
+| Celdas de carga 50 kg | Ficha del vendedor | https://hubot.cl/producto/celda-de-carga-50-kg/ |
 
 ## Herramientas
 
@@ -31,8 +31,12 @@
 
 ## Referencias del problema (ODS 3 y caídas en adultos mayores)
 
-[Pegar aquí las referencias en formato APA que ya están en el informe.]
+BAU Accesibilidad. (2025). *Senama: 43% de las caídas de adultos mayores se produce en sus viviendas*. https://bauaccesibilidad.cl/blogs/news/adaptabilidad-universal-vivienda-adultos-mayores
+
+Portal Red Salud. (2025, 27 octubre). *Mes del Adulto Mayor: Los riesgos de las caídas y la complejidad de la recuperación*. https://portalredsalud.cl/2025/10/27/mes-del-adulto-mayor-los-riesgos-de-las-caidas-y-la-complejidad-de-la-recuperacion/
+
+Anthropic. (2025). Claude (versión de agosto 2026) [Modelo de lenguaje de gran escala]. https://claude.ai
 
 ## Uso de inteligencia artificial
 
-[Pegar aquí la declaración de uso de IA que ya está en el informe.]
+Para la elaboración de este proyecto se utilizó apoyo de inteligencia artificial (Claude, Anthropic) en la redacción, corrección ortográfica, búsqueda de materiales, elaboración de código y formato de las fuentes en estilo APA.
