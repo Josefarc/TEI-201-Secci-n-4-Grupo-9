@@ -4,44 +4,26 @@
 
 Instalar desde el Library Manager de Arduino IDE:
 
-1. **[Nombre Librería 1]** - v[X.X.X]
-   - Propósito: [Descripción]
-   - Instalación: `Sketch > Include Library > Manage Libraries > Buscar "[nombre]"`
+1. **HX711 (autor: bogde)** - v0.7.5
+   - Propósito: leer las celdas de carga a través del amplificador HX711.
+   - Instalación: `Sketch > Include Library > Manage Libraries > Buscar "HX711"` (autor: bogde).
 
-2. **[Nombre Librería 2]** - v[X.X.X]
-   - Propósito: [Descripción]
-   - Instalación: [Instrucciones]
+2. **ESP8266 Arduino Core (ESP8266WiFi y espnow)** - v3.1.2
+   - Propósito: soporte de las placas Wemos D1 y D1 Mini, y comunicación ESP-NOW entre el mat y el control.
+   - Instalación: `Tools > Board > Boards Manager > Buscar "esp8266"`, y luego seleccionar la placa `LOLIN(WEMOS) D1 R2 & mini`.
 
 ---
 
 ## Librerías Personalizadas/Modificadas
 
-Si hay librerías modificadas o no disponibles en Arduino IDE, incluir en esta carpeta:
-
-### Estructura
-```
-librerias/
-├── MiLibreria/
-│   ├── MiLibreria.h
-│   ├── MiLibreria.cpp
-│   ├── keywords.txt
-│   └── README.md
-```
-
-### Instalación Manual
-```bash
-# Copiar carpeta a Arduino libraries
-cp -r MiLibreria ~/Documents/Arduino/libraries/
-```
+No se usan librerías modificadas ni personalizadas. Todas se instalan desde el Arduino IDE, por eso esta carpeta no incluye archivos de librerías.
 
 ---
 
 ## Dependencias Completas
 
-Listar TODAS las librerías necesarias con versiones exactas:
-
 | Librería | Versión | Fuente | Obligatoria |
 |----------|---------|--------|-------------|
-| WiFi | Built-in | ESP32 Core | ✅ |
-| [Lib 1] | x.x.x | Arduino Library Manager | ✅ |
-| [Lib 2] | x.x.x | GitHub | ❌ |
+| ESP8266WiFi | Incluida en el core 3.1.2 | ESP8266 Arduino Core | ✅ |
+| espnow | Incluida en el core 3.1.2 | ESP8266 Arduino Core | ✅ |
+| HX711 (bogde) | 0.7.5 | Arduino Library Manager | ✅ |
