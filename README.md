@@ -6,11 +6,17 @@
   - Josefa Ramírez C
   - Alfred Tamm V
   
-- **ODS Seleccionado:** [Número y nombre]
-- **Problema a resolver:** [Descripción breve]
+- **ODS Seleccionado:** ODS 3, Salud y Bienestar
+- **Problema a resolver:** las caídas nocturnas son un riesgo frecuente en adultos mayores que se levantan de noche, y muchas veces nadie se entera a tiempo. Las soluciones existentes dependen de supervisión constante, de internet, son costosas o lo fueron creadas para este problema en específico.
 
 ### Descripción del Proyecto
-[Breve descripción de la solución IoT propuesta]
+SafeRest es un sistema de dos dispositivos que se comunican entre sí:
+
+- **Mat:** Una superficie con 4 celdas de carga junto a la cama. Detecta cuando la persona pisa el mat y envía una alerta al control del cuidador para que este asista al adulto mayor.
+- **Control:** Un dispositivo pequeño con buzzer y botón. Suena cuando recibe la alerta, y el cuidador lo silencia con el botón. Al silenciarlo, avisa al mat que la alarma fue atendida para que deje de emitir alertas.
+
+Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de manera inalámbrica gracias a una bateria, además el mat poseerá como respaldo una batería ante cortes de luz para su continuo funcionamiento.
+
 
 ### Estado del Proyecto
 - **Versión actual:** v3.0
