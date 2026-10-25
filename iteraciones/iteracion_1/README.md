@@ -78,7 +78,7 @@ Los problemas identificados y las mejoras planificadas están detallados en `v1_
 - Con un UPS, el equipo cambia a la batería automáticamente si se corta la luz.
 
 ### De Diseño
-- La altura de las celdas de carga define lo bajo que puede quedar el mat.
+- La altura de las celdas de carga y de los circuitos define lo bajo que puede quedar el mat.
 - Hay que prever en el diseño las aberturas para cargar el UPS y acceder a su interruptor.
 
 ---

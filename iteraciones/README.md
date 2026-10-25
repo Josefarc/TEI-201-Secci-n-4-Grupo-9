@@ -4,7 +4,6 @@
 
 Esta carpeta documenta la evolución del prototipo a través de las diferentes versiones desarrolladas durante el curso.
 
-
 ---
 
 ## Estructura de Carpetas
@@ -68,7 +67,7 @@ Cada carpeta incluye:
 
 **Aprendizajes clave:**
 - ESP-NOW funciona sin WiFi ni router
-- Con un UPS el equipo sigue funcionando sin estar conectado a la corriente eléctrica
+- Con un UPS el control sigue funcionando sin estar conectado a la corriente eléctrica
 - La altura de las celdas y los circuitos limita lo bajo que puede quedar el mat
 
 ### Versión 2 (Iteración 2) - Primera Mejora
