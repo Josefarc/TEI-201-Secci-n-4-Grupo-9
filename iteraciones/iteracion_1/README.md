@@ -47,9 +47,9 @@ Incluidas en la carpeta `v1_fotos/`:
 - `v1_control_circuito.jpg`: circuito del control en protoboard con Wemos D1 mini, pulsador, buzzer y módulo UPS con batería 18650
 - `v1_mat_armado.jpg`: prototipo del mat armado, con marco de madera y alfombra
 - `v1_mat_celdas.jpg`: mat visto sin la alfombra, con las 4 celdas de carga fijadas a la placa de aluminio
-- `v1_mat_circuito.jpg`: electrónica del mat (Wemos D1, HX711 Y cableado desde las celdas) vista por debajo
+- `v1_mat_circuito.jpg`: electrónica del mat (Wemos D1, HX711 y cableado desde las celdas) vista por debajo
 - `v1_prueba_funcionamiento.mp4`: prueba del sistema completo con una pesa sobre el mat, el control recibe la alerta por ESP-NOW y activa el buzzer
-- `v1_sistema_completo.jpg`: mat y control
+- `v1_sistema_completo.jpg`: mat y control lado a lado
 
 ---
 
@@ -89,5 +89,5 @@ Los problemas identificados y las mejoras planificadas están detallados en `v1_
 - `control.ino` - Código del control
 - `esquema_mat.png` - Esquema del circuito del mat
 - `esquema_control.png` - Esquema del circuito del control
-- `v1_fotos/` - Fotografías del prototipo (pendiente)
+- `v1_fotos/` - Fotografías del prototipo 
 - `v1_notas.txt` - Problemas identificados y mejoras planificadas
