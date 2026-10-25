@@ -17,11 +17,11 @@
 | Componente | Documento | Enlace |
 |---|---|---|
 | HX711 | Datasheet, Avia Semiconductor | https://cdn.sparkfun.com/datasheets/Sensors/ForceFlex/hx711_english.pdf |
+| Celdas de carga 50 kg | Datasheet (`hardware/bom/datasheets/`) y ficha del vendedor | https://hubot.cl/producto/celda-de-carga-50-kg/ |
 | ESP-NOW | Descripción del protocolo, Espressif | https://www.espressif.com/en/products/software/esp-now/overview |
 | Wemos D1 Mini | Documentación de la placa | https://www.wemos.cc/en/latest/d1/d1_mini.html |
-| Transistor 2N2222 | Datasheet del fabricante | https://hubot.cl/producto/transistor-2n2222-to-92-sku-668h3/ |
+| Transistor 2N2222 | Ficha del vendedor | https://hubot.cl/producto/transistor-2n2222-to-92-sku-668h3/ |
 | Módulo UPS con batería 18650 | Ficha del vendedor | https://hubot.cl/producto/modulo-cargador-usb-para-bateria-18650-v3-para-mcu-sku-672/ |
-| Celdas de carga 50 kg | Ficha del vendedor | https://hubot.cl/producto/celda-de-carga-50-kg/ |
 
 ## Herramientas
 
@@ -35,7 +35,7 @@ BAU Accesibilidad. (2025). *Senama: 43% de las caídas de adultos mayores se pro
 
 Portal Red Salud. (2025, 27 octubre). *Mes del Adulto Mayor: Los riesgos de las caídas y la complejidad de la recuperación*. https://portalredsalud.cl/2025/10/27/mes-del-adulto-mayor-los-riesgos-de-las-caidas-y-la-complejidad-de-la-recuperacion/
 
-Anthropic. (2025). Claude (versión de agosto 2026) [Modelo de lenguaje de gran escala]. https://claude.ai
+Anthropic. (2026). *Claude* [Modelo de lenguaje de gran escala]. https://claude.ai
 
 ## Uso de inteligencia artificial
 
