@@ -68,6 +68,35 @@ Incluidas en la carpeta `v1_fotos/`:
 
 Los problemas identificados y las mejoras planificadas están detallados en `v1_notas.txt`.
 
+
+---
+
+### Problemas Identificados
+1. **El interruptor del UPS no apaga los pads 5V/GND:** solo corta la salida USB-A y la batería se descarga igual. Solución: apagar desconectando el cable de 5 V y documentarlo en el manual.
+2. **Mat sin respaldo de energía:** el respaldo con batería solo está probado en el control. Solución: instalar un UPS con batería 18650 en el mat.
+3. **Circuito en protoboard:** conexiones frágiles y cables sueltos. Solución: pasar a una placa perforada e imprimir las cajas diseñadas.
+4. **Umbral de peso sin calibrar:** `UMBRAL_KG` es un valor de prueba (1 kg). Solución: calibrar con un peso más alto y probar con objetos más pesados.
+
+El detalle de cada problema (causa probable y solución propuesta) está en `v1_notas.txt`.
+
+### Mejoras Planificadas
+
+**Hardware:**
+- [ ] Instalar el UPS con batería 18650 en el mat
+- [ ] Reemplazar la protoboard por una placa perforada
+- [ ] Medir consumo, autonomía de la batería y alcance de ESP-NOW
+
+**Software:**
+- [ ] Calibrar el mat con un peso conocido
+- [ ] Ajustar el umbral de detección (`UMBRAL_KG`)
+
+**Diseño:**
+- [ ] Imprimir la caja del control
+- [ ] Mejorar el ruteo de cables
+
+**Testing:**
+- [ ] Probar con un objeto de mayor peso
+
 ---
 
 ## Aprendizajes
