@@ -88,8 +88,7 @@ flowchart TD
 
 ### Apagado del Sistema
 1. Desconectar la alimentación del mat.
-2. Desconectar la alimentación del control.
-
+2. Apagar el control desconectando el cable de 5 V del módulo UPS (el interruptor del UPS solo corta la salida USB-A; si el cable queda conectado, la batería se descarga).
 ---
 
 ## Troubleshooting
@@ -111,3 +110,7 @@ flowchart TD
 **Problema 4: La alarma se activa con objetos livianos**
 - Causa probable: el umbral es muy bajo.
 - Solución: subir `UMBRAL_KG` en `mat.ino` según el peso real de una persona.
+
+**Problema 5: El control recibe la alerta pero el buzzer no suena**
+- Causa probable: el transistor 2N2222 está al revés o la resistencia está mal conectada.
+- Solución: revisar la base (D5 por la resistencia de 1 kΩ), el colector (buzzer) y el emisor (GND).
