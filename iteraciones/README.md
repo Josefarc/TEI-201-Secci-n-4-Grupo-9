@@ -37,29 +37,43 @@ Cada carpeta debe incluir:
 
 | Aspecto | v1 | v2 | v3 |
 |---------|----|----|----| 
-| **Fecha** | [fecha] | [fecha] | [fecha] |
-| **Sensores** | [lista] | [lista] | [lista] |
-| **Actuadores** | [lista] | [lista] | [lista] |
-| **Conectividad** | [tipo] | [tipo] | [tipo] |
-| **Encapsulado** | ❌ | Prototipo | Finalizado |
+| **Fecha** | 19/10/2026 | [fecha] | [fecha] |
+| **Sensores** | 4 celdas de carga + HX711 | [lista] | [lista] |
+| **Actuadores** | Buzzer | [lista] | [lista] |
+| **Conectividad** | ESP-NOW | [tipo] | [tipo] |
+| **Encapsulado** | Mat: marco de madera; control: diseño 3D | Prototipo | Finalizado |
 | **Testing** | Solo equipo | 2 usuarios | 5+ usuarios |
-| **Funcionalidad** | 60% | 80% | 100% |
+| **Funcionalidad** | 50% | 80% | 100% |
 
 ---
 
 ## Evolución del Diseño
 
 ### Versión 1 (Iteración 1) - Concepto Inicial
-**Fecha:** [XX/XX/2025]  
+**Fecha:** 19/10/2026  
 **Estado:** Prototipo alpha - Prueba de concepto
 
 **Características:**
-- [Descripción breve]
-- Problemas principales identificados
-- Aprendizajes clave
+- Mat con 4 celdas de carga y HX711 que detecta el peso
+- Prototipo físico del mat: marco de madera con alfombra
+- Alerta inalámbrica al control por ESP-NOW (sin WiFi)
+- Control con buzzer, pulsador y respaldo con batería 18650 (probado en un corte de energía)
+- Modelos 3D del mat y del control, BOM y esquemas de conexión
+- Circuito en protoboard
+
+**Problemas principales:**
+- El mat aún no tiene respaldo de batería instalado
+- El interruptor del UPS no apaga los pads 5V/GND
+- Circuito frágil y cajas sin imprimir
+- Umbral de peso sin calibrar y sin pruebas con usuarios
+
+**Aprendizajes clave:**
+- ESP-NOW funciona sin WiFi ni router
+- Con un UPS el equipo sigue funcionando en un corte de luz
+- La altura de las celdas limita lo bajo que puede quedar el mat
 
 ### Versión 2 (Iteración 2) - Primera Mejora
-**Fecha:** [XX/XX/2025]  
+**Fecha:** [XX/XX/2026]  
 **Estado:** Prototipo funcional mejorado
 
 **Mejoras implementadas:**
@@ -71,7 +85,7 @@ Cada carpeta debe incluir:
 - [Problema 2]
 
 ### Versión 3 (Iteración 3) - Versión Final
-**Fecha:** [XX/XX/2025]  
+**Fecha:** [XX/XX/2026]  
 **Estado:** Prototipo de alta resolución
 
 **Mejoras finales:**
@@ -79,8 +93,7 @@ Cada carpeta debe incluir:
 - [Mejora 2]
 
 **Resultado:**
-- Sistema robusto y probado
-- Listo para piloto en terreno
+- [Resultado]
 
 ---
 
@@ -133,18 +146,19 @@ Cada carpeta debe incluir:
 
 | Métrica | v1 | v2 | v3 | Mejora Total |
 |---------|----|----|----| -------------|
-| Tiempo respuesta (ms) | 500 | 200 | 100 | ↓80% |
-| Consumo (mA) | 250 | 180 | 120 | ↓52% |
-| Tasa de errores (%) | 15 | 5 | 1 | ↓93% |
-| Satisfacción usuario (1-5) | 3.0 | 3.8 | 4.5 | ↑50% |
+| Tiempo respuesta (ms) | [medir] | [medir] | [medir] | [calcular] |
+| Consumo (mA) | [medir] | [medir] | [medir] | [calcular] |
+| Tasa de errores (%) | [medir] | [medir] | [medir] | [calcular] |
+| Satisfacción usuario (1-5) | [medir] | [medir] | [medir] | [calcular] |
 
 ---
 
 ## Lecciones Aprendidas
 
 ### Técnicas
-- [Lección 1]
-- [Lección 2]
+- ESP-NOW permite comunicar mat y control sin WiFi ni router.
+- El HX711 se alimenta con 3V3 por la lógica de 3,3 V del ESP8266.
+- El interruptor del módulo UPS solo corta la salida USB-A, no los pads de 5 V.
 
 ### De Proceso
 - [Lección 1]
