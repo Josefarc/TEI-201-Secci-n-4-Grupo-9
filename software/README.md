@@ -22,10 +22,10 @@ Documentación técnica del software.
 
 ## Stack Tecnológico
 
-**Plataforma:** Arduino / ESP8266 (Wemos D1 y Wemos D1 Mini)
-**Lenguaje:** C/C++
-**IDE:** Arduino IDE 2.x
-**Placa en el IDE:** `LOLIN(WEMOS) D1 R2 & mini`
+**Plataforma:** Arduino / ESP8266 (Wemos D1 y Wemos D1 Mini)  
+**Lenguaje:** C/C++  
+**IDE:** Arduino IDE 2.x  
+**Placa en el IDE:** `LOLIN(WEMOS) D1 R2 & mini`  
 **Librerías principales:**
 - HX711 (bogde) - versión 0.7.5
 - ESP8266 Arduino Core (incluye ESP8266WiFi y espnow) - versión 3.1.2
