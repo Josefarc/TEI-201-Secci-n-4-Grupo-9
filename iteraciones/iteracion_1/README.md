@@ -32,6 +32,7 @@ Primera versión del prototipo SafeRest: un mat con celdas de carga que detecta 
 - Actuadores:
   - Buzzer (alerta sonora)
 - Otros: pulsador, módulo UPS con batería 18650 (control), cargador USB, protoboard, cables de conexión
+- Estructura del mat: marco de madera con alfombra sobre las celdas de carga (prototipo físico)
 
 ### Software
 - IDE: Arduino IDE
@@ -56,32 +57,13 @@ Incluir en esta carpeta:
 ✅ El mat envía la alerta al control por ESP-NOW, sin WiFi  
 ✅ El control hace sonar el buzzer y el pulsador silencia la alarma  
 ✅ El control sigue funcionando con la batería 18650 en un corte de energía (probado)  
+✅ Prototipo físico del mat armado (marco de madera con alfombra)  
 ✅ Modelos 3D del mat y del control con todos sus componentes  
 ❌ El mat todavía no tiene respaldo de batería instalado  
 ❌ Alcance de ESP-NOW y autonomía de la batería sin medir  
 ❌ Sin pruebas con usuarios
 
-### Problemas Identificados
-
-1. **Problema 1: el interruptor del UPS no apaga los pads**
-   - Descripción: el interruptor solo corta la salida USB-A. Los pads 5V y GND siguen activos y la batería se descarga aunque esté en OFF.
-   - Causa probable: diseño del módulo UPS.
-   - Solución propuesta: apagar desconectando el cable de 5 V y dejarlo documentado en el manual.
-
-2. **Problema 2: mat sin respaldo de energía**
-   - Descripción: el respaldo con batería solo está probado en el control.
-   - Causa probable: el UPS del mat quedó previsto en el diseño, pero no instalado.
-   - Solución propuesta: instalar un UPS con batería 18650 dentro de los circuitos del mat.
-
-3. **Problema 3: circuito en protoboard**
-   - Descripción: las conexiones son frágiles y los cables quedan sueltos.
-   - Causa probable: prototipo de prueba, sin soldaduras ni encapsulado.
-   - Solución propuesta: pasar el circuito a una placa perforada e imprimir las cajas diseñadas.
-
-4. **Problema 4: umbral de peso sin calibrar**
-   - Descripción: el umbral de detección es un valor de prueba (`UMBRAL_KG`).
-   - Causa probable: aún no se calibra con personas reales.
-   - Solución propuesta: calibrar con un peso conocido y probar con usuarios.
+Los problemas identificados y las mejoras planificadas están detallados en `v1_notas.txt`.
 
 ---
 
@@ -98,28 +80,6 @@ Incluir en esta carpeta:
 
 ---
 
-## Plan para Iteración 2
-
-### Mejoras Planificadas
-
-**Hardware:**
-- [ ] Instalar el UPS con batería 18650 en el mat
-- [ ] Reemplazar la protoboard por una placa perforada
-- [ ] Medir consumo, autonomía de la batería y alcance de ESP-NOW
-
-**Software:**
-- [ ] Calibrar el mat con un peso conocido
-- [ ] Ajustar el umbral de detección (`UMBRAL_KG`)
-
-**Diseño:**
-- [ ] Imprimir la caja del control y la barra de circuitos del mat
-- [ ] Mejorar ruteo de cables
-
-**Testing:**
-- [ ] Probar con un objeto de mayor peso
-
----
-
 ## Archivos en esta Carpeta
 
 - `mat.ino` - Código del mat
@@ -127,3 +87,4 @@ Incluir en esta carpeta:
 - `esquema_mat.png` - Esquema del circuito del mat
 - `esquema_control.png` - Esquema del circuito del control
 - `v1_fotos/` - Fotografías del prototipo (pendiente)
+- `v1_notas.txt` - Problemas identificados y mejoras planificadas
