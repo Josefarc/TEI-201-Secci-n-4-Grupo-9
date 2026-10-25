@@ -5,9 +5,9 @@
   - Benjamín Gil R
   - Josefa Ramírez C
   - Alfred Tamm V
-  
+
 - **ODS Seleccionado:** ODS 3, Salud y Bienestar
-- **Problema a resolver:** las caídas nocturnas son un riesgo frecuente en adultos mayores que se levantan de noche, y muchas veces nadie se entera a tiempo. Las soluciones existentes dependen de supervisión constante, de internet, son costosas o lo fueron creadas para este problema en específico.
+- **Problema a resolver:** las caídas nocturnas son un riesgo frecuente en adultos mayores que se levantan de noche, y muchas veces nadie se entera a tiempo. Las soluciones existentes dependen de supervisión constante, de internet, son costosas o no fueron creadas para este problema en específico.
 
 ### Descripción del Proyecto
 SafeRest es un sistema de dos dispositivos que se comunican entre sí:
@@ -15,17 +15,16 @@ SafeRest es un sistema de dos dispositivos que se comunican entre sí:
 - **Mat:** Una superficie con 4 celdas de carga junto a la cama. Detecta cuando la persona pisa el mat y envía una alerta al control del cuidador para que este asista al adulto mayor.
 - **Control:** Un dispositivo pequeño con buzzer y botón. Suena cuando recibe la alerta, y el cuidador lo silencia con el botón. Al silenciarlo, avisa al mat que la alarma fue atendida para que deje de emitir alertas.
 
-Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de manera inalámbrica gracias a una bateria, además el mat poseerá como respaldo una batería ante cortes de luz para su continuo funcionamiento.
-
+Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de manera inalámbrica gracias a una batería. Además, el mat tendrá como respaldo una batería ante cortes de luz para su funcionamiento continuo.
 
 ### Estado del Proyecto
 - **Versión actual:** v1.0
-- **Última actualización:** 23-10-2026
-- **Estado:** Prototipo funcional: El mat y el control se comunican, el control funciona con batería.
+- **Última actualización:** 25-10-2026
+- **Estado:** Prototipo funcional: el mat y el control se comunican, el control funciona con batería.
 
 ---
 
-##  Estructura del Repositorio
+## Estructura del Repositorio
 ```
 ├── hardware/         # Esquemas, lista de materiales (BOM) y diagramas de conexión
 ├── software/         # Código Arduino y librerías
@@ -37,15 +36,16 @@ Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de m
 ├── documentacion/    # Informes y presentaciones
 ├── iteraciones/      # Evidencia del desarrollo y cambios del diseño
 └── FUENTES.md        # Bibliografía, datasheets y librerías utilizadas
+```
 
 ---
 
-##  Inicio Rápido
+## Inicio Rápido
 
 ### Requisitos Previos
 - Arduino IDE 2.x
 - Fusion 360
-- [Otras herramientas necesarias]
+- GitHub Desktop (para clonar el repositorio)
 
 ### Instalación
 1. Clonar el repositorio (por ejemplo, con GitHub Desktop).
@@ -54,9 +54,10 @@ Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de m
 4. Leer la MAC de cada placa con `software/src/mac/` y escribirla en el código contrario (`macControl` en el mat, `macMat` en el control).
 5. Cargar `software/src/mat/` en el Wemos D1 y `software/src/control/` en el Wemos D1 Mini.
 6. Calibrar con `software/src/calibracion/` y ajustar `FACTOR_ESCALA` y `UMBRAL_KG` en el código del mat.
+
 ---
 
-##  Checklist de Entrega
+## Checklist de Entrega
 
 ### Hardware ✓
 - [ ] Esquema del circuito (diagramas de conexión del mat y del control)
@@ -84,8 +85,5 @@ Funciona sin WiFi (comunicación directa por ESP-NOW) y el control funciona de m
 
 ---
 
-
----
-
-##  Licencia
-Este proyecto es desarrollado como parte del curso TEI201 - Facultad de Ingenieria y Ciencias - Universidad Adolfo Ibañez
+## Licencia
+Este proyecto es desarrollado como parte del curso TEI201 - Facultad de Ingeniería y Ciencias - Universidad Adolfo Ibáñez
