@@ -75,7 +75,7 @@ Los problemas identificados y las mejoras planificadas están detallados en `v1_
 ### Técnicos
 - ESP-NOW permite comunicar mat y control sin WiFi ni router.
 - El HX711 se alimenta con 3V3 por la lógica de 3,3 V del ESP8266.
-- Con un UPS, el equipo cambia a la batería automáticamente si se corta la luz.
+- Con un UPS, el control cambia a la batería automáticamente si se corta la luz.
 
 ### De Diseño
 - La altura de las celdas de carga y de los circuitos define lo bajo que puede quedar el mat.
