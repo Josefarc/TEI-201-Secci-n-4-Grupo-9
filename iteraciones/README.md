@@ -4,7 +4,6 @@
 
 Esta carpeta documenta la evolución del prototipo a través de las diferentes versiones desarrolladas durante el curso.
 
-**CRÍTICO:** Demostrar el proceso iterativo es un requisito para obtener puntaje completo en "Integración y Refinamiento" (2.5 puntos).
 
 ---
 
@@ -23,12 +22,12 @@ iteraciones/
 
 ## Contenido de Cada Iteración
 
-Cada carpeta debe incluir:
+Cada carpeta incluye:
 
 1. **README.md** - Descripción de la versión
 2. **Fotos** - Imágenes del prototipo en ese estado
-3. **Esquema** - Circuito de esa versión (si cambió)
-4. **Código** - Versión del software (si cambió)
+3. **Esquema** - Circuito de esa versión 
+4. **Código** - Versión del software
 5. **Notas** - Problemas identificados y mejoras planificadas
 
 ---
@@ -41,7 +40,7 @@ Cada carpeta debe incluir:
 | **Sensores** | 4 celdas de carga + HX711 | [lista] | [lista] |
 | **Actuadores** | Buzzer | [lista] | [lista] |
 | **Conectividad** | ESP-NOW | [tipo] | [tipo] |
-| **Encapsulado** | Mat: marco de madera; control: diseño 3D | Prototipo | Finalizado |
+| **Encapsulado** | Mat: marco de madera y control: diseño 3D | Prototipo | Finalizado |
 | **Testing** | Solo equipo | 2 usuarios | 5+ usuarios |
 | **Funcionalidad** | 50% | 80% | 100% |
 
@@ -59,18 +58,18 @@ Cada carpeta debe incluir:
 - Alerta inalámbrica al control por ESP-NOW (sin WiFi)
 - Control con buzzer, pulsador y respaldo con batería 18650 (probado en un corte de energía)
 - Modelos 3D del mat y del control, BOM y esquemas de conexión
-- Circuito en protoboard
+- Circuito del control en protoboard
 
 **Problemas principales:**
 - El mat aún no tiene respaldo de batería instalado
 - El interruptor del UPS no apaga los pads 5V/GND
-- Circuito frágil y cajas sin imprimir
-- Umbral de peso sin calibrar y sin pruebas con usuarios
+- Circuito del control frágil y cajas sin imprimir
+- Umbral de peso de prueba (1 kg)
 
 **Aprendizajes clave:**
 - ESP-NOW funciona sin WiFi ni router
 - Con un UPS el equipo sigue funcionando en un corte de luz
-- La altura de las celdas limita lo bajo que puede quedar el mat
+- La altura de las celdas y los circuitos limita lo bajo que puede quedar el mat
 
 ### Versión 2 (Iteración 2) - Primera Mejora
 **Fecha:** [XX/XX/2026]  
@@ -146,10 +145,10 @@ Cada carpeta debe incluir:
 
 | Métrica | v1 | v2 | v3 | Mejora Total |
 |---------|----|----|----| -------------|
-| Tiempo respuesta (ms) | [medir] | [medir] | [medir] | [calcular] |
-| Consumo (mA) | [medir] | [medir] | [medir] | [calcular] |
-| Tasa de errores (%) | [medir] | [medir] | [medir] | [calcular] |
-| Satisfacción usuario (1-5) | [medir] | [medir] | [medir] | [calcular] |
+| Tiempo respuesta (ms) | [por medir] | [por medir] | [por medir] | [por calcular] |
+| Consumo (mA) | [por medir] | [por medir] | [por medir] | [por calcular] |
+| Tasa de errores (%) | [por medir] | [por medir] | [por medir] | [por calcular] |
+| Satisfacción usuario (1-5) | [por medir] | [por medir] | [por medir] | [por calcular] |
 
 ---
 
