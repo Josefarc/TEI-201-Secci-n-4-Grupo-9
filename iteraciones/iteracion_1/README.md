@@ -56,7 +56,7 @@ Incluir en esta carpeta:
 ✅ El mat lee el peso con las 4 celdas de carga  
 ✅ El mat envía la alerta al control por ESP-NOW, sin WiFi  
 ✅ El control hace sonar el buzzer y el pulsador silencia la alarma  
-✅ El control sigue funcionando con la batería 18650 en un corte de energía (probado)  
+✅ El control sigue funcionando con la batería 18650 eal ser desconectado de la corriente
 ✅ Prototipo físico del mat armado (marco de madera con alfombra)  
 ✅ Modelos 3D del mat y del control con todos sus componentes  
 ❌ El mat todavía no tiene respaldo de batería instalado  
