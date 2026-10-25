@@ -55,9 +55,9 @@ Fotografías de alta resolución del prototipo ensamblado
 ## Especificaciones Técnicas
 
 **Alimentación:** 5 V desde el módulo UPS (batería 18650 de 3,7 V, carga por micro-USB)  
-**Consumo:** [medir en mA]  
+**Consumo:** [por medir]  
 **Dimensiones (diseño 3D):** mat 1200 mm x 700 mm x 35 mm (barra de circuitos); control 111 mm x 72,6 mm x 33,5 mm  
-**Peso:** [gramos]  
+**Peso:** mat 1411 g y control 264 g
 **Comunicación:** ESP-NOW entre mat y control (sin WiFi ni router)
 
 ---
