@@ -43,7 +43,7 @@ Primera versión del prototipo SafeRest: un mat con celdas de carga que detecta 
 
 ## Fotos del Prototipo
 
-Incluidas en la carpeta `v1_fotos/`:
+Incluidas en la carpeta `v1_fotos`:
 - `v1_control_circuito.jpg`: circuito del control en protoboard con Wemos D1 mini, pulsador, buzzer y módulo UPS con batería 18650
 - `v1_mat_armado.jpg`: prototipo del mat armado, con marco de madera y alfombra
 - `v1_mat_celdas.jpg`: mat visto sin la alfombra, con las 4 celdas de carga fijadas a la placa de aluminio
