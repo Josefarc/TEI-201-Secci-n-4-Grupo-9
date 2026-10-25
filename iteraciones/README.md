@@ -56,7 +56,7 @@ Cada carpeta incluye:
 - Mat con 4 celdas de carga y HX711 que detecta el peso
 - Prototipo físico del mat: marco de madera con alfombra
 - Alerta inalámbrica al control por ESP-NOW (sin WiFi)
-- Control con buzzer, pulsador y respaldo con batería 18650 (probado en un corte de energía)
+- Control con buzzer, pulsador y respaldo con batería 18650 (funciona conectado a la red y sin ella)
 - Modelos 3D del mat y del control, BOM y esquemas de conexión
 - Circuito del control en protoboard
 
@@ -68,7 +68,7 @@ Cada carpeta incluye:
 
 **Aprendizajes clave:**
 - ESP-NOW funciona sin WiFi ni router
-- Con un UPS el equipo sigue funcionando en un corte de luz
+- Con un UPS el equipo sigue funcionando sin estar conectado a la corriente eléctrica
 - La altura de las celdas y los circuitos limita lo bajo que puede quedar el mat
 
 ### Versión 2 (Iteración 2) - Primera Mejora
