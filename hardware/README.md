@@ -50,6 +50,7 @@ Fotografías de alta resolución del prototipo ensamblado
 - ⚠️ Respetar la polaridad de la batería 18650 al insertarla en el módulo UPS.
 - ⚠️ El ESP8266 trabaja con lógica de 3,3 V: el HX711 se alimenta con 3V3, no con 5 V.
 - ⚠️ Cargar la batería antes de usar el prototipo para confirmar el respaldo (con la batería cargada mide cerca de 4,1 V).
+- ⚠️ El mat toma el cero al encenderse: encenderlo siempre con el mat vacío y quieto.
 
 ---
 
