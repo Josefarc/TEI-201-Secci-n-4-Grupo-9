@@ -27,8 +27,8 @@ Documentación técnica del software.
 **IDE:** Arduino IDE 2.x
 **Placa en el IDE:** `LOLIN(WEMOS) D1 R2 & mini`
 **Librerías principales:**
-- HX711 (bogde) - versión [X.X]
-- ESP8266 Arduino Core (incluye ESP8266WiFi y espnow) - versión [X.X]
+- HX711 (bogde) - versión 0.7.5
+- ESP8266 Arduino Core (incluye ESP8266WiFi y espnow) - versión 3.1.2
 
 ---
 
@@ -57,7 +57,7 @@ Editar las siguientes constantes en `src/mat/mat.ino`:
 ```cpp
 // Calibración
 const float FACTOR_ESCALA = 11150.0;   // obtenido con calibracion.ino
-const float UMBRAL_KG = 1.0;           // peso mínimo para activar la alerta
+const float UMBRAL_KG = 1.0;           // peso mínimo para activar la alerta (valor de prueba)
 
 // Detección
 const unsigned long CONFIRMA_MS = 300; // tiempo que el peso debe mantenerse
@@ -69,6 +69,8 @@ const uint8_t CANAL = 1;               // mismo canal en mat y control
 ```
 
 En `src/control/control.ino` se debe escribir la MAC del mat en `macMat`.
+
+> **Nota:** `UMBRAL_KG = 1.0` es un valor de prueba para la iteración 1. Se ajustará con el testing en uso real.
 
 ---
 
@@ -87,6 +89,13 @@ CONTROL: alerta recibida → buzzer intermitente → botón → silencia → avi
 3. **Procesamiento:** compara con el umbral y confirma que el peso se mantiene.
 4. **Actuación:** buzzer en el control, que se silencia con un botón.
 5. **Comunicación:** mensajes ESP-NOW (1 = alerta, 2 = atendida).
+
+---
+
+## Pendientes
+- Ajustar `UMBRAL_KG` con pruebas en uso real.
+- Medir el alcance de ESP-NOW entre mat y control.
+- Medir la autonomía de la batería del control.
 
 ---
 
