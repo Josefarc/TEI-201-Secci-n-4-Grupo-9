@@ -22,7 +22,7 @@ El archivo BOM debe incluir las siguientes columnas:
 
 - `bom_completo.xlsx` - Lista completa de materiales usados hasta ahora (mat y control)
 - `bom_completo.pdf` - Versión PDF para visualización
-- `datasheets/` - Carpeta con PDFs de componentes críticos (HX711 y celda de carga)
+- `datasheets/` - Carpeta con PDFs de componentes críticos (HX711, celda de carga y transistor 2N2222)
 
 > El BOM incluye solo los materiales utilizados en el prototipo actual y se amplía en cada iteración.
 
@@ -30,16 +30,16 @@ El archivo BOM debe incluir las siguientes columnas:
 
 ## Presupuesto Total
 
-**Costo Total Estimado:** $46.360 CLP
+**Costo Total Estimado:** $46.520 CLP
 
 | Sistema | Costo |
 |---------|-------|
 | Mat | $23.390 |
-| Control | $22.970 |
+| Control | $23.130 |
 
 ### Desglose por Categoría
 - Microcontrolador: $13.480 (Wemos D1 del mat y Wemos D1 mini del control)
 - Sensores: $11.900 (4 celdas de carga y módulo HX711)
 - Actuadores: $300 (buzzer)
 - Estructura/Encapsulado: $0 (por definir: placa de pisada, caja y barra impresas en 3D)
-- Otros: $20.680 (módulo UPS, batería 18650, protoboard, cargador, cables y pulsador)
+- Otros: $20.840 (módulo UPS, batería 18650, protoboard, cargador, cables, pulsador, transistor y resistencia)
