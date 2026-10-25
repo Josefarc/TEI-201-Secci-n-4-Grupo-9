@@ -19,7 +19,7 @@ Programa del control (Wemos D1 Mini). Recibe la alerta, hace sonar el buzzer y a
 - Loop: si hay alarma activa, hace sonar el buzzer y espera el botón para silenciarla.
 
 ### Otros archivos
-- `calibracion/calibracion.ino`: obtiene el factor de escala usando un peso conocido.
+- `calibracion/calibracion.ino`: obtiene el factor de escala del mat. Con el mat vacío toma el cero (tara) y, al poner un peso conocido, entrega la lectura cruda; el `FACTOR_ESCALA` se calcula dividiendo esa lectura por el peso en kg (ver "Calibración del Mat" en `software/README.md`).
 - `mac/mac.ino`: lee la dirección MAC de la placa, necesaria para que el mat y el control se reconozcan.
 
 ---
@@ -44,4 +44,4 @@ Programa del control (Wemos D1 Mini). Recibe la alerta, hace sonar el buzzer y a
 - Baudrate: 115200
 - El mat muestra el peso medido cada segundo, además de mensajes como `ALERTA enviada` y `Entrega OK`.
 - El control muestra `Control listo` al arrancar.
-- Para calibrar, usar `calibracion/calibracion.ino` y leer la "lectura cruda" en el monitor.
+- Para calibrar, usar `calibracion/calibracion.ino` con el mat vacío, poner un peso conocido y leer la "lectura cruda" en el monitor. El factor de escala es esa lectura dividida por el peso en kg.
