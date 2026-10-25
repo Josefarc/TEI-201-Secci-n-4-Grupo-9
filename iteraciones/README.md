@@ -4,6 +4,8 @@
 
 Esta carpeta documenta la evolución del prototipo a través de las diferentes versiones desarrolladas durante el curso.
 
+**CRÍTICO:** Demostrar el proceso iterativo es un requisito para obtener puntaje completo en "Integración y Refinamiento" (2.5 puntos).
+
 ---
 
 ## Estructura de Carpetas
@@ -21,12 +23,12 @@ iteraciones/
 
 ## Contenido de Cada Iteración
 
-Cada carpeta incluye:
+Cada carpeta debe incluir:
 
 1. **README.md** - Descripción de la versión
 2. **Fotos** - Imágenes del prototipo en ese estado
-3. **Esquema** - Circuito de esa versión 
-4. **Código** - Versión del software
+3. **Esquema** - Circuito de esa versión (si cambió)
+4. **Código** - Versión del software (si cambió)
 5. **Notas** - Problemas identificados y mejoras planificadas
 
 ---
