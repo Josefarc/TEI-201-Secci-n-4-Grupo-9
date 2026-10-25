@@ -89,5 +89,5 @@ Los problemas identificados y las mejoras planificadas están detallados en `v1_
 - `control.ino` - Código del control
 - `esquema_mat.png` - Esquema del circuito del mat
 - `esquema_control.png` - Esquema del circuito del control
-- `v1_fotos/` - Fotografías del prototipo 
+- `v1_fotos` - Fotografías del prototipo 
 - `v1_notas.txt` - Problemas identificados y mejoras planificadas
