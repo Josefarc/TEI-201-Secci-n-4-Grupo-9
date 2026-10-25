@@ -66,8 +66,6 @@ Incluidas en la carpeta `v1_fotos/`:
 ❌ Alcance de ESP-NOW y autonomía de la batería sin medir  
 ❌ Sin pruebas con usuarios
 
-Los problemas identificados y las mejoras planificadas están detallados en `v1_notas.txt`.
-
 
 ---
 
