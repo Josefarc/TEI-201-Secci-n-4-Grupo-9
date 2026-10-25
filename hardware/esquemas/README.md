@@ -5,7 +5,7 @@
 - `esquema_mat.png` - Esquema de conexiones del mat (4 celdas de carga, HX711, Wemos D1 y UPS)
 - `esquema_control.png` - Esquema de conexiones del control remoto (Wemos D1 mini, buzzer, pulsador y UPS)
 
-> Los esquemas son diagramas de conexiones. El archivo fuente de Fritzing (`.fzz`) queda pendiente para una iteración posterior.
+> Los esquemas son diagramas de conexiones elaborados como imágenes. No se usó Fritzing (de pago) ni Wokwi (no soporta el ESP8266). El archivo fuente editable queda pendiente para una iteración posterior.
 
 ---
 
