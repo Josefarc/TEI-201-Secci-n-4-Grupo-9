@@ -122,7 +122,8 @@ Incluir en esta carpeta:
 
 ## Archivos en esta Carpeta
 
-- `v1_codigo.ino` - Código de esta versión
-- `v1_esquema.png` - Esquema del circuito
-- `v1_fotos/` - Fotografías del prototipo
-- `v1_notas.txt` - Notas adicionales del equipo
+- `mat.ino` - Código del mat
+- `control.ino` - Código del control
+- `esquema_mat.png` - Esquema del circuito del mat
+- `esquema_control.png` - Esquema del circuito del control
+- `v1_fotos/` - Fotografías del prototipo (pendiente)
