@@ -1,10 +1,11 @@
 ### Información del Equipo
+
 - **Integrantes:**
-  - Beatriz Chaparro I
-  - Miguel Colín M
-  - Benjamín Gil R
-  - Josefa Ramírez C
-  - Alfred Tamm V
+  - Beatriz Chaparro I (@beachaparro)
+  - Miguel Colín M (@mcolinm)
+  - Benjamín Gil R (@benjaingil)
+  - Josefa Ramírez C (@Josefarc)
+  - Alfred Tamm V (@alfredtamm)
 
 - **ODS Seleccionado:** ODS 3, Salud y Bienestar
 - **Problema a resolver:** las caídas nocturnas son un riesgo frecuente en adultos mayores que se levantan de noche, y muchas veces nadie se entera a tiempo. Las soluciones existentes dependen de supervisión constante, de internet, son costosas o no fueron creadas para este problema en específico.
