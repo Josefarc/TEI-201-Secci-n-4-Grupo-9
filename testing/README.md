@@ -21,15 +21,13 @@ Datos cuantitativos recolectados
 ## Metodología de Testing
 
 ### Grupo Objetivo
-- **Perfil de usuarios:** [Descripción]
+- **Perfil de usuarios:** Cuidadores formales o informales de adultos mayores de 65 años con movilidad reducida
 - **Cantidad mínima:** 5 usuarios
-- **Ubicación:** [Contexto real de uso]
+- **Ubicación:** Dormitorio o habitación de reposo
 
 ### Protocolo de Testing
 1. **Briefing** (5 min)
-   - Explicar propósito del prototipo
-   - Contexto de uso
-
+Validar una alfombra con sensores de carga para alertar salidas de cama y prevenir caídas nocturnas.  
 2. **Sesión de Uso** (15-20 min)
    - Usuario interactúa con prototipo
    - Observación sin intervención
