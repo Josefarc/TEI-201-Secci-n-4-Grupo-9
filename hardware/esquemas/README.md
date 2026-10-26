@@ -12,14 +12,19 @@
 - `wokwi_screenshot.png` - Captura del circuito
 - `wokwi_link.txt` - URL del proyecto online
 
-> **Estado en SafeRest:** no se usó Fritzing (de pago) ni Wokwi (no soporta el ESP8266). Los esquemas se entregan como diagramas de conexiones en imagen. El archivo fuente editable queda pendiente para una iteración posterior.
+> **Estado en SafeRest:** no se usó Fritzing (de pago) ni Wokwi (no soporta el ESP8266). Los esquemas editables se hicieron en **Fusion (Electronics)** y se entregan como archivos `.fsch`, junto con imágenes exportadas para verlos sin abrir Fusion.
 
 ---
 
 ## Archivos Incluidos
 
-- `esquema_mat.png` - Esquema de conexiones del mat (4 celdas de carga, HX711, Wemos D1 y UPS previsto)
-- `esquema_control.png` - Esquema de conexiones del control remoto (Wemos D1 mini, buzzer con transistor y resistencia, pulsador y UPS)
+**Esquemas editables (Fusion Electronics):**
+- `Esquema Mat.fsch` - Esquema del mat (4 celdas de carga, HX711, Wemos D1 y UPS previsto)
+- `Esquema Control.fsch` - Esquema del control remoto (Wemos D1 mini, buzzer con transistor y resistencia, pulsador y UPS)
+
+**Imágenes de los esquemas:**
+- `esquema_mat.png` - Esquema de conexiones del mat
+- `esquema_control.png` - Esquema de conexiones del control remoto
 
 ---
 
@@ -37,3 +42,4 @@
 - **Mat:** las 4 celdas de carga (de 3 cables: rojo, negro y blanco) se unen en un solo puente de medición. Al HX711 llegan 4 cables: los dos blancos a E+ y E−, el rojo a A− y el negro a A+. El HX711 se conecta al Wemos D1 con DT en D5 (GPIO14) y SCK en D6 (GPIO12), y se alimenta con 3V3.
 - **Control:** el buzzer activo se enciende desde D5 (GPIO14) a través de una resistencia de 1 kΩ y un transistor 2N2222: D5 va a la base por la resistencia, el emisor va a GND y el buzzer queda entre 5 V y el colector. El pulsador va en D6 (GPIO12) con `INPUT_PULLUP`, por lo que al apretarlo conecta D6 a GND y silencia la alarma.
 - **Pines:** los números de GPIO coinciden con los definidos en el código (`software/src`).
+- **Abrir los esquemas:** los archivos `.fsch` se abren con Fusion (panel de datos → Upload, luego doble clic).
