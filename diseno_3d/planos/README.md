@@ -1,5 +1,9 @@
 # Planos Técnicos
+## Nota para el ayudante — Entrega 2
 
+En las carpetas de renders, Fusion y planos, la versión marcada como final es la que se debe evaluar para el Avance 2. Las demás se mantienen como historial de diseño, para que todo el equipo tenga visibilidad del progreso del proyecto.
+
+El principal desafío pendiente es llevar el sistema a un mat de mayor área, con un diseño que se integre a la estética del dormitorio.
 ## Planos Requeridos
 
 ### 1. Plano de Conjunto
