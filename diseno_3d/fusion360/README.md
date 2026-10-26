@@ -1,3 +1,10 @@
+## Nota para el ayudante — Entrega 2
+
+En las carpetas de renders, Fusion y planos, la versión marcada como final es la que se debe evaluar para el Avance 2. Las demás se mantienen como historial de diseño, para que todo el equipo tenga visibilidad del progreso del proyecto.
+
+El principal desafío pendiente es llevar el sistema a un mat de mayor área, con un diseño que se integre a la estética del dormitorio.
+
+
 # Archivos Fusion 360
 
 ## Archivos Requeridos
@@ -59,5 +66,4 @@ Listar parámetros principales utilizados:
 
 ---
 
-## Nota Para el Ayudante Entrega 2
-En los renders, fusion, y planos la versión que dice final es la ha evaluar para el avance 2, los otros estan para historial de diseño y ayudarnos a que el grupo entero tenga visibilidad sobre progreso en el proyecto. Cabe mencionar que el principal desafío a tratar es configurar el proyecto en una especie de matt de mayor área con un diseño que combine con la habitación.
+
