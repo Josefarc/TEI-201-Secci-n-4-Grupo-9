@@ -78,7 +78,7 @@ En `src/control/control.ino` se debe escribir la MAC del mat en `macMat`.
 
 El mat necesita dos valores: el cero (lectura con el mat vacío) y el factor de escala (cuánto vale la lectura por cada kilo). Se obtienen con `src/calibracion/calibracion.ino`:
 
-1. **Cero (tara):** con el mat vacío y quieto, cargar `calibracion.ino` en el Wemos D1 del mat. Al iniciar, el programa toma el valor de vacío y lo fija como cero.
+1. **Cero (tara):** con el mat vacío y quieto, cargar `calibracion.ino` en el Wemos D1 del mat. Al iniciar, el programa espera unos 3 segundos y toma el valor de vacío como cero.
 2. **Peso conocido:** poner sobre el mat un peso de valor conocido (por ejemplo, una botella de 2 kg o un peso de 6,5 kg) y leer en el monitor serie la "lectura cruda".
 3. **Factor de escala:** dividir la lectura cruda por el peso en kg.
    `FACTOR_ESCALA = lectura cruda / peso conocido (kg)`
