@@ -70,7 +70,7 @@ flowchart TD
 2. Instalar el core ESP8266 (v3.1.2) y la librería HX711 (v0.7.5). Ver `software/librerias/README.md`.
 3. Cargar `src/mac/mac.ino` en cada placa y anotar su dirección MAC.
 4. Escribir la MAC del control en `macControl` (`src/mat/mat.ino`) y la del mat en `macMat` (`src/control/control.ino`).
-5. Calibrar el mat con `src/calibracion/calibracion.ino` y escribir el resultado en `FACTOR_ESCALA`.
+5. Calibrar el mat con `src/calibracion/calibracion.ino` (ver "Calibración del Mat" en `software/README.md`) y escribir el resultado en `FACTOR_ESCALA`.
 6. Cargar `src/mat/mat.ino` en el Wemos D1 (mat) y `src/control/control.ino` en el Wemos D1 Mini (control).
 
 ---
@@ -89,6 +89,7 @@ flowchart TD
 ### Apagado del Sistema
 1. Desconectar la alimentación del mat.
 2. Apagar el control desconectando el cable de 5 V del módulo UPS (el interruptor del UPS solo corta la salida USB-A; si el cable queda conectado, la batería se descarga).
+
 ---
 
 ## Troubleshooting
