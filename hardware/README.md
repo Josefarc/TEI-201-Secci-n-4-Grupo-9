@@ -6,7 +6,7 @@ Esta carpeta contiene toda la documentación técnica del hardware del proyecto.
 ### 📁 Carpetas
 
 #### `esquemas/`
-Diagramas de circuitos y esquemáticos del sistema (mat y control remoto)
+Diagramas de circuitos y esquemáticos del sistema (mat y control remoto): archivos editables de Fusion (`.fsch`) e imágenes de los esquemas
 
 #### `bom/`
 Bill of Materials (Lista de materiales)
