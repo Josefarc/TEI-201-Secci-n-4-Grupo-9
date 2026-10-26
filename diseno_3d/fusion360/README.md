@@ -58,3 +58,6 @@ Listar parámetros principales utilizados:
 | v1.0 | [Fecha] | Primera versión funcional |
 
 ---
+
+##Nota Para el Ayudante Entrega 2
+En los renders, fusion, y planos la versión que dice final es la a evaluar para el avance 2, los otros estan para historial de diseño y ayudarnos a que el grupo entero tenga visibilidad sobre progreso en el proyecto. Cabe mencionar que el principal desafió a tratar es configurar el proyecto en una especie de mat de mayo área con un diseño que combine con la habitación
