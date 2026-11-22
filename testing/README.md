@@ -1,91 +1,75 @@
 # Testing y Validación
 
 ## Objetivo
-Validar el funcionamiento del prototipo con usuarios reales y medir el impacto cuantitativo en la problemática ODS seleccionada.
+Validar el funcionamiento del prototipo SafeRest con personas reales y conocer la opinión de personas cercanas al cuidado de adultos mayores sobre el sistema.
 
 ---
 
 ## 📁 Carpetas
 
 #### `reportes/`
-Documentos con resultados del testing
+Reporte de testing con usuarios: participantes, protocolo, resultados, conclusiones y limitaciones.
 
 #### `evidencias/`
-Fotos y videos de sesiones con usuarios
+Descripción de los videos y fotos de las pruebas. Los archivos están en `hardware/fotos/`.
 
 #### `datos/`
-Datos cuantitativos recolectados
+Datos de las pruebas (detección, alcance, autonomía y calibración) y de la encuesta, incluido el Excel con las respuestas originales (`respuestas_encuesta.xlsx`).
 
 ---
 
 ## Metodología de Testing
 
-### Grupo Objetivo
-- **Perfil de usuarios:** Cuidadores formales o informales de adultos mayores de 65 años con movilidad reducida
-- **Cantidad mínima:** 5 usuarios
-- **Ubicación:** Dormitorio o habitación de reposo
+Se hicieron dos tipos de evaluación sobre la versión final del prototipo (iteración 2).
 
-### Protocolo de Testing
-1. **Briefing** (5 min)
-Validar una alfombra con sensores de carga para alertar salidas de cama y prevenir caídas nocturnas.  
-2. **Sesión de Uso** (15-20 min)
-   - Usuario interactúa con prototipo
-   - Observación sin intervención
-   - Toma de notas
+### 1. Pruebas del prototipo
+- **Participantes:** 5 personas de 51, 55, 57, 65 y 78 kg (2 de ellas adultos mayores, de 78 y 61 años) y 2 perros de 18 y 15 kg.
+- **Procedimiento:** con el mat encendido y vacío (para que tome el cero), cada persona pisa el mat y se observa si el control suena. Lo mismo con cada perro. También se probó con el control en otra habitación.
+- **Alcance y autonomía:** se probó la comunicación a distintas distancias y con distintas paredes, y se midió el voltaje de la batería del control para estimar su duración.
+- **Umbral de detección:** 20 kg, con al menos 20 s entre alertas.
 
-3. **Entrevista Post-Testing** (10 min)
-   - Preguntas sobre experiencia
-   - Feedback cualitativo
-   - Sugerencias de mejora
-
-4. **Encuesta Cuantitativa** (5 min)
-   - Escala Likert (1-5)
-   - Métricas específicas
+### 2. Encuesta a usuarios
+- Cuestionario anónimo de 13 preguntas en Google Forms, con 26 respuestas entre el 11 y el 22 de noviembre de 2026.
+- 18 personas tienen o tuvieron un adulto mayor cercano y respondieron todas las preguntas. Las otras 8 solo respondieron las 3 primeras.
+- Temas: experiencia con adultos mayores, caídas, preocupación, utilidad percibida de SafeRest, intención de uso y ubicación preferida del compartimento electrónico.
 
 ---
 
-## Métricas de Evaluación
+## Resultados principales
 
-### Usabilidad
-- Facilidad de uso (1-5)
-- Claridad de funcionamiento (1-5)
-- Satisfacción general (1-5)
+| Aspecto | Resultado |
+|---|---|
+| Detección de personas | 5 de 5 activaron la alarma |
+| Mascotas | 0 de 2 perros activaron la alarma |
+| Alcance ESP-NOW | ~9 m en línea de vista; 7,3 m con 2 tabiques; 3 a 4 m con una pared de concreto de 22 cm |
+| Autonomía del control | 24 a 30 h (estimada) |
+| Preocupación por una caída nocturna (encuesta, 1 a 5) | Promedio 4,6 |
+| Utilidad percibida de SafeRest (encuesta, 1 a 5) | Promedio 4,6 |
+| Usaría SafeRest (encuesta) | 83 % (Sí o Probablemente sí) |
+| Compartimento preferido (encuesta) | 83 % eligió uno externo conectado a la alfombra |
 
-### Impacto ODS
-- [Métrica específica 1 relacionada con ODS]
-- [Métrica específica 2 relacionada con ODS]
-- [Métrica específica 3 relacionada con ODS]
-
-### Desempeño Técnico
-- Tiempo de respuesta del sistema
-- Tasa de errores
-- Confiabilidad
-
----
-
-## Análisis de Resultados
-
-### Cuantitativo
-- Promedios y desviaciones estándar
-- Gráficos de resultados
-- Comparación con baseline
-
-### Cualitativo
-- Temas recurrentes en feedback
-- Problemas identificados
-- Sugerencias de mejora
+El detalle completo está en `datos/README.md` y en `reportes/README.md`.
 
 ---
 
 ## Validación de Impacto ODS
 
-**ODS Seleccionado:** [Número y nombre]
+**ODS seleccionado:** ODS 3, Salud y Bienestar.
 
-**Meta específica del proyecto:** [Describir]
+**Meta específica del proyecto:** reducir el riesgo y el tiempo de respuesta ante caídas nocturnas de adultos mayores, avisando al cuidador cuando la persona se levanta de la cama.
 
-**Indicadores de impacto:**
-1. [Indicador 1] - Baseline: [X], Meta: [Y], Alcanzado: [Z]
-2. [Indicador 2] - Baseline: [X], Meta: [Y], Alcanzado: [Z]
+**Qué se validó:**
+- El prototipo detecta a personas de más de 20 kg y no se activa con mascotas pequeñas.
+- La alerta llega al cuidador sin WiFi ni internet, hasta ~9 m en línea de vista.
+- La encuesta muestra la necesidad: 89 % de las personas con un adulto mayor cercano dice que este se levanta de noche al menos a veces, y 67 % conoce al menos una caída.
+- La encuesta muestra aceptación: utilidad percibida de 4,6 de 5 y 83 % lo usaría.
 
-**Proyección de impacto a escala:**
-[Si el prototipo se despliega en toda la ciudad/comunidad, cuál sería el impacto estimado]
+**Qué no se midió:** una reducción real de caídas, que requiere un estudio de más duración con el prototipo instalado en hogares. Por eso los resultados muestran necesidad y aceptación, no impacto comprobado.
+
+---
+
+## Limitaciones y pendientes
+- Las personas probadas pesaban entre 51 y 78 kg, así que no se verificó el rango entre 20 y 51 kg.
+- Solo se probó con 2 adultos mayores. Faltan pruebas de usabilidad con más adultos mayores y cuidadores.
+- La autonomía del control es una estimación y no se midió el consumo del mat.
+- La encuesta es una muestra de conveniencia, no representativa.
