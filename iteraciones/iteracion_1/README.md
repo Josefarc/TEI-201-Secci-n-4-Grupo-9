@@ -75,7 +75,7 @@ Incluidas en la carpeta `v1_fotos/`:
 3. **Circuito en protoboard:** conexiones frágiles y cables sueltos. Solución: pasar a una placa perforada e imprimir las cajas diseñadas.
 4. **Umbral de peso sin calibrar:** `UMBRAL_KG` es un valor de prueba (1 kg). Solución: calibrar con un peso más alto y probar con objetos más pesados.
 
-El detalle de cada problema (causa probable y solución propuesta) está en `v1_notas.txt`.
+Línea 78: El detalle de cada problema (causa probable y solución propuesta) está en v1_notas.md .
 
 ### Mejoras Planificadas
 
@@ -117,4 +117,4 @@ El detalle de cada problema (causa probable y solución propuesta) está en `v1_
 - `esquema_mat.png` - Esquema del circuito del mat
 - `esquema_control.png` - Esquema del circuito del control
 - `v1_fotos/` - Fotografías del prototipo 
-- `v1_notas.txt` - Problemas identificados y mejoras planificadas
+-  v1_notas.md - Problemas identificados y mejoras planificadas
