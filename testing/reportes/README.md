@@ -58,7 +58,7 @@ Se hicieron dos tipos de evaluación:
 ## 3. Protocolo Aplicado
 
 ### Pruebas del prototipo
-1. Se enciende el mat con la superficie vacía y quieta, para que tome el cero (tara) y se enciende el control.
+1. Se enciende el mat con la superficie vacía y quieta, para que tome el cero (tara), y luego se enciende el control.
 2. Cada persona pisa el mat. Se observa si el control suena, con el buzzer y el LED blanco parpadeando.
 3. Cada perro se sube al mat. Se observa que el control no suene.
 4. Se repite con el control en otra habitación.
