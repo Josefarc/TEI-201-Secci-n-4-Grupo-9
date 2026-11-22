@@ -52,7 +52,7 @@ Fotografías del prototipo ensamblado. Las de la iteración 1 están en `Fotos p
 
 **Ambos**
 1. Insertar la batería 18650 en el módulo UPS y cargarla con el cargador USB por el puerto micro-USB (el LED rojo indica que está cargando).
-2. Cargar el código de `software/final/` en cada Wemos (mat y control) y verificar que las direcciones MAC coincidan.
+2. Cargar el código de `software/src/` en cada Wemos (`mat_final/mat_final.ino` en el mat y `control_final/control_final.ino` en el control) y verificar que las direcciones MAC coincidan.
 3. Calibrar el mat con un peso conocido (`FACTOR_ESCALA` ≈ 19260) y probar la alerta (umbral de 20 kg).
 
 ### Precauciones
@@ -88,7 +88,7 @@ Fotografías del prototipo ensamblado. Las de la iteración 1 están en `Fotos p
 | El LED del mat parpadea en rojo | El HX711 no responde (mal contacto en VCC, GND, DT o SCK) o falla ESP-NOW | Revisar las 4 conexiones entre el HX711 y el Wemos D1 R2 y reiniciar el mat |
 | El peso sale negativo o con valores raros | Cables A+/A− o blanco/negro de las celdas al revés, topes mal ajustados o factor de calibración incorrecto | Invertir los cables de la celda afectada, revisar la holgura de los topes y recalibrar `FACTOR_ESCALA` con un peso conocido |
 | El mat dice "Entrega FALLO" | El control está apagado, fuera de alcance o con otra MAC o canal | Encender el control, acercarlo al mat (evitar paredes de concreto) y verificar las MAC en el código |
-| El control no recibe la alerta | Direcciones MAC mal configuradas o uno de los equipos apagado | Verificar las MAC en el código (`software/final/`) y que ambos estén encendidos |
+| El control no recibe la alerta | Direcciones MAC mal configuradas o uno de los equipos apagado | Verificar las MAC en el código (`software/src/`) y que ambos estén encendidos |
 | La alarma suena sin que nadie pise el mat | Umbral de peso demasiado bajo o mat sin tarar | Ajustar `UMBRAL_KG` en el código del mat y encenderlo con el mat vacío |
 | Una mascota activa la alarma | Su peso supera el umbral de 20 kg | Subir `UMBRAL_KG` en el código del mat |
 | El LED del control sigue naranjo o verde tras desenchufar | El cargador se detecta por voltaje y la batería está casi llena | Es una limitación conocida (ver `iteraciones/iteracion_2/limitaciones_deteccion_alimentacion.md`); no afecta la alarma |
