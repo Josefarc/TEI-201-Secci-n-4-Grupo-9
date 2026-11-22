@@ -1,75 +1,36 @@
 # Reportes de Testing
 
-## Formato del Reporte Principal
+## Reporte principal
 
-### `reporte_testing_usuarios_v3.pdf`
+### `reporte_testing_usuarios.md`
+Reporte de las pruebas del prototipo SafeRest (iteración 2) con usuarios: 5 personas (2 de ellas adultos mayores) y 2 mascotas, además de una encuesta anónima sobre la cercanía de las personas con el cuidado de adultos mayores.
 
-**Estructura sugerida:**
-
-1. **Introducción**
-   - Objetivo del testing
-   - Metodología utilizada
-
-2. **Descripción de Participantes**
-   - Perfil de usuarios
-   - Cantidad y demografía
-
-3. **Protocolo Aplicado**
-   - Pasos del testing
-   - Preguntas realizadas
-   - Métricas evaluadas
-
-4. **Resultados Cuantitativos**
-   - Tablas de datos
-   - Gráficos de resultados
-   - Análisis estadístico básico
-
-5. **Resultados Cualitativos**
-   - Feedback de usuarios
-   - Observaciones del equipo
-   - Problemas identificados
-
-6. **Validación de Impacto ODS**
-   - Métricas de impacto medidas
-   - Comparación con situación inicial
-   - Proyección de escalabilidad
-
-7. **Conclusiones**
-   - Fortalezas del prototipo
-   - Limitaciones identificadas
-   - Recomendaciones para mejoras futuras
-
-8. **Anexos**
-   - Formularios utilizados
-   - Consentimientos informados
-   - Datos raw
+**Contenido:**
+1. **Introducción:** objetivo de las pruebas y metodología.
+2. **Participantes:** las 5 personas y los 2 perros, con su peso, y el perfil de quienes respondieron la encuesta.
+3. **Protocolo aplicado:** cómo se hicieron las pruebas (el sujeto pisa el mat, se observa si el control suena) y las preguntas de la encuesta.
+4. **Resultados:** detección de personas, mascotas, alcance de la comunicación, autonomía y resultados de la encuesta.
+5. **Observaciones y problemas identificados:** por ejemplo, el alcance se reduce con paredes de concreto y no se probó con personas de menos de 51 kg.
+6. **Relación con el ODS 3:** cómo el prototipo aporta a reducir el riesgo de caídas nocturnas.
+7. **Conclusiones:** fortalezas, limitaciones y mejoras futuras.
+8. **Anexos:** enlace a la encuesta y a los datos.
 
 ---
 
-## Reportes Complementarios
+## Datos y evidencia
 
-### `analisis_metricas_ods.pdf`
-Enfoque específico en validación de impacto ODS
+Los datos de las pruebas, el detalle de cada una y las limitaciones están en estas carpetas:
 
-### `feedback_usuarios.pdf`
-Compilación de comentarios y sugerencias
-
-### `comparativa_iteraciones.pdf`
-Evolución del desempeño entre versiones v1, v2, v3
+| Qué | Dónde |
+|---|---|
+| Resultados y tablas de las pruebas | `testing/datos/README.md` |
+| Videos y fotos de las pruebas | `testing/evidencias/README.md` y `hardware/fotos/` |
+| Evolución entre la iteración 1 y la 2 | `iteraciones/` |
 
 ---
 
-## Datos a Incluir
+## Encuesta a usuarios
 
-### Tablas de Resultados
-Ejemplo de formato:
+Encuesta anónima en Google Forms, titulada "SafeRest: Tecnología para el cuidado de adultos mayores". Pregunta por la experiencia de quien responde con adultos mayores: si tiene un familiar o persona cercana adulta mayor, si participó en su cuidado y si vive o vivió con una. No se pidieron nombres ni datos de contacto.
 
-| Usuario | Edad | Facilidad de Uso (1-5) | Satisfacción (1-5) | Comentarios |
-|---------|------|------------------------|-------------------|-------------|
-| U1 | [edad] | 4 | 5 | "Muy intuitivo" |
-| U2 | [edad] | 5 | 4 | "Funciona bien" |
-
-### Gráficos Recomendados
-- Gráfico de barras: Promedios por métrica
-- Gráfico de dispersión: Correlaciones
-- Gráfico de líneas: Evolución entre iteraciones
+Enlace: https://docs.google.com/forms/d/e/1FAIpQLScST9OGpb6jBOlyr7oj6F6Dm_mvbPy2ckD9lPvLSlmFQeuLQQ/viewform
