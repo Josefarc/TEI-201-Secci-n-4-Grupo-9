@@ -87,7 +87,7 @@ Encuesta anónima en Google Forms ("SafeRest: Tecnología para el cuidado de adu
 | Ubicación preferida del compartimento | 15 de 18 (83 %) eligió un compartimento externo conectado a la alfombra |
 | Característica más importante del compartimento | "Que no interfiera al caminar": 13 de 18 (72 %) |
 
-El detalle de cada pregunta está en `testing/reportes/reporte_testing_usuarios.md` y las respuestas originales en `respuestas_encuesta.xlsx`.
+El detalle de cada pregunta está en `testing/reportes/README.md` y las respuestas originales en `respuestas_encuesta.xlsx`.
 
 ---
 
@@ -117,5 +117,5 @@ El detalle de cada pregunta está en `testing/reportes/reporte_testing_usuarios.
 ## Evidencia
 
 - Videos de las pruebas: `hardware/fotos/` (`v2_prueba_perro.mp4`, `v2_prueba_persona_alcance.mp4`, `v2_prueba_alerta_control.mp4`).
-- Reporte completo: `testing/reportes/reporte_testing_usuarios.md`.
+- Reporte completo: `testing/reportes/README.md`.
 - Descripción completa de la iteración y sus pruebas: `iteraciones/iteracion_2/README.md`.
