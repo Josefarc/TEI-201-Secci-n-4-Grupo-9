@@ -25,6 +25,7 @@ El resto de los datos, es decir las pruebas del prototipo, están en este mismo 
 | Alcance ESP-NOW, yeso cartón | 2 tabiques (3 habitaciones) | 7,3 m |
 | Alcance ESP-NOW, concreto | Pared de concreto de 22 cm | 3 a 4 m; a ~9 m no llegó la señal |
 | Autonomía del control | Batería 18650 de 1800 mAh, ~60 mA en reposo | 24 a 30 h (estimada) |
+| Corte de energía del mat | Se desenchufa el cargador con el mat encendido | Sigue funcionando con la batería, sin reiniciarse |
 | Calibración | Objeto de 6,67 kg con el factor inicial | Leía 11,52 kg; factor corregido a 19260 |
 | Encuesta | 26 respuestas anónimas (18 con un adulto mayor cercano) | Utilidad percibida 4,6 de 5; 83 % lo usaría o probablemente lo usaría |
 
@@ -72,6 +73,12 @@ Conclusión: en una casa con tabiques el alcance es suficiente, pero las paredes
 - **Corrección:** factor nuevo = factor anterior × (lectura / peso real) ≈ 19260.
 - **Iteración 2:** `FACTOR_ESCALA = 19260.0`.
 
+### 5. Corte de energía del mat
+- **Objetivo:** comprobar que el mat sigue funcionando si se corta la luz, gracias a su batería 18650.
+- **Procedimiento:** con el mat vacío, encendido y conectado al cargador USB (que carga el módulo UPS), se desenchufó el cargador para simular un corte de luz.
+- **Resultado:** el mat no se reinició (no repitió el LED amarillo ni los 3 destellos verdes) y siguió funcionando con la batería.
+- **Límites de la prueba:** no se midió cuánto dura el mat solo con la batería, porque el consumo del mat no se midió.
+
 ---
 
 ## Encuesta a usuarios
@@ -102,7 +109,7 @@ El detalle de cada pregunta está en `testing/reportes/README.md`, los gráficos
 | Alcance medido | Sin medir | ~9 m en línea de vista |
 | Autonomía del control | Sin medir | 24 a 30 h (estimada) |
 | Distinción persona / mascota | No | Sí (20 kg): 5 de 5 personas detectadas y 2 de 2 perros ignorados |
-| Alimentación del mat | Cable USB | UPS con batería 18650 |
+| Alimentación del mat | Cable USB | UPS con batería 18650: sigue funcionando si se corta la luz |
 
 ---
 
@@ -110,7 +117,7 @@ El detalle de cada pregunta está en `testing/reportes/README.md`, los gráficos
 
 - Probar con personas de menos de 50 kg (por ejemplo, un adulto mayor muy liviano): las 5 personas probadas pesaban entre 51 y 78 kg, así que no se verificó el rango entre 20 y 51 kg.
 - Pruebas formales de usabilidad con más adultos mayores y cuidadores (hasta ahora solo se probó con 2 adultos mayores).
-- Descarga completa de la batería del control y medición del consumo del mat.
+- Descarga completa de la batería del control y medición del consumo del mat (para saber cuánto dura el mat solo con la batería).
 - Probar con más mascotas, en especial perros de peso cercano a 20 kg.
 
 ---
