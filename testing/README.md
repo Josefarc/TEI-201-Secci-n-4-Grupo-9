@@ -14,7 +14,7 @@ Reporte de testing con usuarios: participantes, protocolo, resultados, conclusio
 Descripción de los videos y fotos de las pruebas. Los archivos están en `hardware/fotos/`.
 
 #### `datos/`
-Datos de las pruebas (detección, alcance, autonomía y calibración) y de la encuesta, incluido el Excel con las respuestas originales (`respuestas_encuesta.xlsx`).
+Datos de las pruebas (detección, alcance, autonomía y calibración) y de la encuesta, incluidos el Excel con las respuestas originales (`respuestas_encuesta.xlsx`) y los gráficos de cada pregunta (`Resultados_encuesta_SafeRest.pdf`).
 
 ---
 
