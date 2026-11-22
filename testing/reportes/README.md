@@ -13,7 +13,7 @@ Verificar que el prototipo SafeRest cumple su función: detectar cuando una pers
 
 ### Metodología
 Se hicieron dos tipos de evaluación:
-1. **Pruebas del prototipo** con 5 personas (2 de ellas adultos mayores) y 2 perros, además de pruebas de alcance y de autonomía.
+1. **Pruebas del prototipo** con 5 personas (2 de ellas adultos mayores) y 2 perros, además de pruebas de alcance, de autonomía y de corte de energía.
 2. **Encuesta anónima** en Google Forms, con 26 respuestas, sobre el contexto de cuidado de adultos mayores, la utilidad percibida de SafeRest y preferencias de diseño.
 
 ---
@@ -64,6 +64,7 @@ Se hicieron dos tipos de evaluación:
 4. Se repite con el control en otra habitación.
 5. Se mide el alcance de la comunicación ESP-NOW a distintas distancias y con distintas paredes.
 6. Se mide el voltaje de la batería del control durante su funcionamiento para estimar la autonomía.
+7. Con el mat encendido y vacío, conectado al cargador USB, se desenchufa el cargador para simular un corte de luz y se observa si el mat se reinicia.
 - **Umbral de detección:** 20 kg, con al menos 20 s entre alertas.
 
 ### Encuesta
@@ -99,6 +100,8 @@ Cuestionario de 13 preguntas en Google Forms, con tres bloques:
 
 ### 4.3 Autonomía del control
 Con la batería a 4,1 V, tras ~3 h de funcionamiento bajó a 4,0 V. Con un consumo de ~60 mA (estimado) y una batería de 1800 mAh, se estima una autonomía de 24 a 30 horas.
+
+**Corte de energía del mat:** con el mat conectado al cargador USB, se desenchufó el cargador para simular un corte de luz. El mat no se reinició y siguió funcionando con su batería 18650.
 
 ### 4.4 Resultados de la encuesta
 Las preguntas 4 a 13 las respondieron las 18 personas con un adulto mayor cercano.
@@ -215,12 +218,13 @@ No se midió una reducción real de caídas, porque eso requiere un estudio de m
 ### Fortalezas
 - Detectó correctamente a las 5 personas y no se activó con los 2 perros (7 de 7 pruebas).
 - Funciona sin WiFi ni internet, con ~9 m de alcance en línea de vista y con el control inalámbrico.
+- Si se corta la luz, el mat sigue funcionando con su batería, sin reiniciarse.
 - La encuesta muestra alta preocupación (4,6 de 5) y alta utilidad percibida (4,6 de 5).
 
 ### Limitaciones
 - No se probó con personas de menos de 51 kg, así que el rango entre 20 y 51 kg no está verificado.
 - Solo se probó con 2 adultos mayores. Faltan pruebas de usabilidad con más adultos mayores y cuidadores.
-- La autonomía del control es una estimación y no hay una medición de descarga completa. No se midió el consumo del mat.
+- La autonomía del control es una estimación y no hay una medición de descarga completa. No se midió el consumo del mat, así que tampoco se sabe cuánto dura solo con su batería.
 - El alcance se reduce con paredes de concreto.
 - La encuesta es una muestra de conveniencia, no representativa.
 
@@ -235,6 +239,7 @@ No se midió una reducción real de caídas, porque eso requiere un estudio de m
 ## 8. Anexos
 
 - **Encuesta:** https://docs.google.com/forms/d/e/1FAIpQLScST9OGpb6jBOlyr7oj6F6Dm_mvbPy2ckD9lPvLSlmFQeuLQQ/viewform
+- **Gráficos de la encuesta:** `testing/datos/Resultados_encuesta_SafeRest.pdf` (respuestas originales en `testing/datos/respuestas_encuesta.xlsx`)
 - **Datos de las pruebas:** `testing/datos/README.md`
 - **Evidencia (videos y fotos):** `testing/evidencias/README.md` y `hardware/fotos/`
 - **Descripción de la iteración 2:** `iteraciones/iteracion_2/README.md`
