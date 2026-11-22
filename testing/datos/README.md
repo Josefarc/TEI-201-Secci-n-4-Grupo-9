@@ -9,6 +9,7 @@ Resultados de las pruebas del prototipo SafeRest y de la encuesta a usuarios. Lo
 | Archivo | Contenido |
 |---|---|
 | `respuestas_encuesta.xlsx` | Respuestas originales de la encuesta (26 respuestas, anónimas), exportadas de Google Forms |
+| `Resultados_encuesta_SafeRest.pdf` | Gráficos con los resultados de cada pregunta de la encuesta, exportados de Google Forms |
 
 El resto de los datos, es decir las pruebas del prototipo, están en este mismo README.
 
@@ -87,7 +88,7 @@ Encuesta anónima en Google Forms ("SafeRest: Tecnología para el cuidado de adu
 | Ubicación preferida del compartimento | 15 de 18 (83 %) eligió un compartimento externo conectado a la alfombra |
 | Característica más importante del compartimento | "Que no interfiera al caminar": 13 de 18 (72 %) |
 
-El detalle de cada pregunta está en `testing/reportes/README.md` y las respuestas originales en `respuestas_encuesta.xlsx`.
+El detalle de cada pregunta está en `testing/reportes/README.md`, los gráficos de cada pregunta en `Resultados_encuesta_SafeRest.pdf` y las respuestas originales en `respuestas_encuesta.xlsx`.
 
 ---
 
