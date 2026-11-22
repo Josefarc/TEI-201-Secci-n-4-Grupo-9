@@ -43,6 +43,7 @@ Se hicieron dos tipos de evaluación sobre la versión final del prototipo (iter
 | Mascotas | 0 de 2 perros activaron la alarma |
 | Alcance ESP-NOW | ~9 m en línea de vista; 7,3 m con 2 tabiques; 3 a 4 m con una pared de concreto de 22 cm |
 | Autonomía del control | 24 a 30 h (estimada) |
+| Corte de energía del mat | Sigue funcionando con la batería, sin reiniciarse |
 | Preocupación por una caída nocturna (encuesta, 1 a 5) | Promedio 4,6 |
 | Utilidad percibida de SafeRest (encuesta, 1 a 5) | Promedio 4,6 |
 | Usaría SafeRest (encuesta) | 83 % (Sí o Probablemente sí) |
