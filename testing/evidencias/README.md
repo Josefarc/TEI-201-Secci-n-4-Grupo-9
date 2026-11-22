@@ -1,6 +1,16 @@
 # Datos de Testing
 
-Resultados de las pruebas del prototipo SafeRest. Los datos son de la iteración 2 (versión final) y se comparan con la iteración 1 cuando hay información. Las pruebas se hicieron con el mat armado y el control funcionando, y en `hardware/fotos/` hay videos de varias de ellas.
+Resultados de las pruebas del prototipo SafeRest y de la encuesta a usuarios. Los datos de las pruebas son de la iteración 2 (versión final) y se comparan con la iteración 1 cuando hay información. Las pruebas se hicieron con el mat armado y el control funcionando, y en `hardware/fotos/` hay videos de varias de ellas.
+
+---
+
+## Archivos de datos
+
+| Archivo | Contenido |
+|---|---|
+| `respuestas_encuesta.xlsx` | Respuestas originales de la encuesta (26 respuestas, anónimas), exportadas de Google Forms |
+
+El resto de los datos, es decir las pruebas del prototipo, están en este mismo README.
 
 ---
 
@@ -15,6 +25,7 @@ Resultados de las pruebas del prototipo SafeRest. Los datos son de la iteración
 | Alcance ESP-NOW, concreto | Pared de concreto de 22 cm | 3 a 4 m; a ~9 m no llegó la señal |
 | Autonomía del control | Batería 18650 de 1800 mAh, ~60 mA en reposo | 24 a 30 h (estimada) |
 | Calibración | Objeto de 6,67 kg con el factor inicial | Leía 11,52 kg; factor corregido a 19260 |
+| Encuesta | 26 respuestas anónimas (18 con un adulto mayor cercano) | Utilidad percibida 4,6 de 5; 83 % lo usaría o probablemente lo usaría |
 
 ---
 
@@ -62,6 +73,24 @@ Conclusión: en una casa con tabiques el alcance es suficiente, pero las paredes
 
 ---
 
+## Encuesta a usuarios
+
+Encuesta anónima en Google Forms ("SafeRest: Tecnología para el cuidado de adultos mayores"), con 26 respuestas recibidas entre el 11 y el 22 de noviembre de 2026. 18 personas tienen o tuvieron un adulto mayor cercano y respondieron las 13 preguntas. Las otras 8 solo respondieron las 3 primeras. Es una muestra de conveniencia, no representativa.
+
+| Indicador (18 personas con un adulto mayor cercano) | Resultado |
+|---|---|
+| Se levanta de noche (frecuentemente o a veces) | 16 de 18 (89 %) |
+| Conoce al menos una caída | 12 de 18 (67 %) |
+| Preocupación por una caída nocturna (1 a 5) | Promedio 4,6 |
+| Utilidad percibida de SafeRest (1 a 5) | Promedio 4,6; las 18 respuestas fueron 4 o 5 |
+| Usaría un dispositivo como SafeRest | 15 de 18 (83 %): 5 "Sí" y 10 "Probablemente sí"; nadie respondió que no |
+| Ubicación preferida del compartimento | 15 de 18 (83 %) eligió un compartimento externo conectado a la alfombra |
+| Característica más importante del compartimento | "Que no interfiera al caminar": 13 de 18 (72 %) |
+
+El detalle de cada pregunta está en `testing/reportes/reporte_testing_usuarios.md` y las respuestas originales en `respuestas_encuesta.xlsx`.
+
+---
+
 ## Comparación entre iteraciones
 
 | Aspecto | Iteración 1 | Iteración 2 |
@@ -88,4 +117,5 @@ Conclusión: en una casa con tabiques el alcance es suficiente, pero las paredes
 ## Evidencia
 
 - Videos de las pruebas: `hardware/fotos/` (`v2_prueba_perro.mp4`, `v2_prueba_persona_alcance.mp4`, `v2_prueba_alerta_control.mp4`).
+- Reporte completo: `testing/reportes/reporte_testing_usuarios.md`.
 - Descripción completa de la iteración y sus pruebas: `iteraciones/iteracion_2/README.md`.
