@@ -86,3 +86,4 @@ Se encuentran directamente en esta carpeta (`fotos/`).
 | `v2_prueba_perro.mp4` | Un perro de 18 kg sobre el mat, sin alarma |
 | `v2_prueba_persona_alcance.mp4` | Una persona se sube al mat y la cámara sigue hasta el control, que está en el velador de otra habitación, y suena y enciende el LED |
 | `v2_prueba_alerta_control.mp4` | El mat y el control, con el LED del control encendido durante la alerta |
+| `v2_prueba_corte_energia.mp4` | El mat conectado al cargador USB; se desenchufa el cargador de la pared para simular un corte de luz y el mat sigue funcionando con su batería, sin reiniciarse |
