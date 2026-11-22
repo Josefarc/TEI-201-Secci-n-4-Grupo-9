@@ -1,107 +1,121 @@
 # Datos de Testing
 
-## Archivos de Datos
-
-### `datos_cuantitativos.xlsx`
-Hoja de cálculo con todos los datos recolectados durante testing
-
-**Estructura sugerida:**
-
-#### Sheet 1: Datos de Usuarios
-| ID Usuario | Edad | Género | Perfil | Fecha Testing |
-|------------|------|--------|--------|---------------|
-| U01 | [edad] | [M/F/Otro] | [descripción] | [fecha] |
-
-#### Sheet 2: Métricas de Usabilidad
-| ID Usuario | Facilidad Uso (1-5) | Satisfacción (1-5) | Tiempo Tarea (seg) | Errores |
-|------------|---------------------|--------------------|--------------------|---------|
-| U01 | 4 | 5 | 45 | 0 |
-
-#### Sheet 3: Métricas de Impacto ODS
-| ID Usuario | Métrica 1 | Métrica 2 | Métrica 3 | Observaciones |
-|------------|-----------|-----------|-----------|---------------|
-| U01 | [valor] | [valor] | [valor] | [texto] |
-
-#### Sheet 4: Feedback Cualitativo
-| ID Usuario | ¿Qué te gustó? | ¿Qué mejorarías? | Otros comentarios |
-|------------|----------------|------------------|-------------------|
-| U01 | [texto] | [texto] | [texto] |
+Resultados de las pruebas del prototipo SafeRest y de la encuesta a usuarios. Los datos de las pruebas son de la iteración 2 (versión final) y se comparan con la iteración 1 cuando hay información. Las pruebas se hicieron con el mat armado y el control funcionando, y en `hardware/fotos/` hay videos de varias de ellas.
 
 ---
 
-### `datos_sensores_testing.csv`
-Datos capturados por el prototipo durante sesiones de testing
+## Archivos de datos
 
-**Formato:**
-```csv
-timestamp, sensor_1, sensor_2, actuador_1, evento
-2024-11-20 10:15:23, 23.5, 65, ON, usuario_inicio
-2024-11-20 10:15:24, 23.6, 65, ON, normal
-```
+| Archivo | Contenido |
+|---|---|
+| `respuestas_encuesta.xlsx` | Respuestas originales de la encuesta (26 respuestas, anónimas), exportadas de Google Forms |
+
+El resto de los datos, es decir las pruebas del prototipo, están en este mismo README.
 
 ---
 
-### `comparativa_versiones.xlsx`
-Comparación de métricas entre iteraciones v1, v2, v3
+## Resumen de resultados (iteración 2)
 
-| Métrica | v1 | v2 | v3 | Mejora (%) |
-|---------|-----|-----|-----|------------|
-| Facilidad de uso | 3.2 | 3.8 | 4.5 | +40.6% |
-| Satisfacción | 3.5 | 4.0 | 4.6 | +31.4% |
-| Errores promedio | 2.3 | 1.2 | 0.4 | -82.6% |
-
----
-
-## Análisis Estadístico
-
-### Estadísticos Básicos
-Para cada métrica calcular:
-- Media (promedio)
-- Mediana
-- Desviación estándar
-- Mínimo y máximo
-- Percentiles (25%, 50%, 75%)
-
-### Ejemplo de Tabla de Resumen
-```
-Métrica: Facilidad de Uso (1-5)
-N = 5 usuarios
-Media: 4.2
-Mediana: 4.0
-Desv. Est.: 0.8
-Mín: 3, Máx: 5
-```
+| Prueba | Condición | Resultado |
+|---|---|---|
+| Detección de personas | 5 personas de 51, 55, 57, 65 y 78 kg pisan el mat (2 de ellas adultos mayores) | Las 5 activaron la alarma en el control |
+| Mascotas | 2 perros de 18 y 15 kg sobre el mat | Ninguno activó la alarma |
+| Alcance ESP-NOW, línea de vista | Mat y control sin obstáculos | ~9 m sin problemas |
+| Alcance ESP-NOW, yeso cartón | 2 tabiques (3 habitaciones) | 7,3 m |
+| Alcance ESP-NOW, concreto | Pared de concreto de 22 cm | 3 a 4 m; a ~9 m no llegó la señal |
+| Autonomía del control | Batería 18650 de 1800 mAh, ~60 mA en reposo | 24 a 30 h (estimada) |
+| Calibración | Objeto de 6,67 kg con el factor inicial | Leía 11,52 kg; factor corregido a 19260 |
+| Encuesta | 26 respuestas anónimas (18 con un adulto mayor cercano) | Utilidad percibida 4,6 de 5; 83 % lo usaría o probablemente lo usaría |
 
 ---
 
-## Datos de Impacto ODS
+## Detalle de las pruebas
 
-### Baseline vs. Resultado
+### 1. Detección de personas y mascotas
+- **Umbral final:** 20 kg, con 20 s de reposo entre alertas.
 
-**Antes de la intervención (baseline):**
-- [Indicador 1]: [Valor inicial]
-- [Indicador 2]: [Valor inicial]
+| Sujeto | Peso | Resultado esperado | Resultado obtenido |
+|---|---|---|---|
+| Persona 1 | 51 kg | Alarma | Alarma |
+| Persona 2 | 55 kg | Alarma | Alarma |
+| Persona 3 | 57 kg | Alarma | Alarma |
+| Persona 4 (adulta mayor, mujer, 78 años) | 65 kg | Alarma | Alarma |
+| Persona 5 (adulto mayor, hombre, 61 años) | 78 kg | Alarma | Alarma |
+| Perro 1 | 18 kg | Sin alarma | Sin alarma |
+| Perro 2 | 15 kg | Sin alarma | Sin alarma |
 
-**Después de la intervención:**
-- [Indicador 1]: [Valor medido con prototipo]
-- [Indicador 2]: [Valor medido con prototipo]
+- **Aciertos:** 7 de 7 pruebas, es decir, las 5 personas activaron la alarma y los 2 perros no.
+- **Funcionamiento:** al pisar el mat, el control suena con el buzzer y el LED blanco parpadeando. También se probó con el control en otra habitación, como lo usaría un cuidador en la noche.
+- **Videos:** perro de 18 kg en `hardware/fotos/v2_prueba_perro.mp4`, persona de 55 kg en `hardware/fotos/v2_prueba_persona_alcance.mp4` y funcionamiento del control en `hardware/fotos/v2_prueba_alerta_control.mp4`.
 
-**Mejora:**
-- [Indicador 1]: [% de mejora]
-- [Indicador 2]: [% de mejora]
+### 2. Alcance de la comunicación ESP-NOW
+| Escenario | Distancia | Resultado |
+|---|---|---|
+| Línea de vista | ~9 m | Funciona |
+| 2 tabiques de yeso cartón (3 habitaciones) | 7,3 m | Funciona |
+| 1 pared de concreto de 22 cm | 3 a 4 m | Funciona |
+| 1 pared de concreto de 22 cm | ~9 m | No llega la alerta |
+
+Conclusión: en una casa con tabiques el alcance es suficiente, pero las paredes de concreto lo reducen mucho, así que conviene dejar el control cerca del mat.
+
+- **Video:** `hardware/fotos/v2_prueba_persona_alcance.mp4`.
+
+### 3. Autonomía de la batería del control
+- **Medición:** con la batería cargada a 4,1 V, después de ~3 h de funcionamiento bajó a 4,0 V.
+- **Consumo:** ~60 mA en reposo (estimado, no medido con instrumento).
+- **Estimación:** 24 a 30 h de funcionamiento continuo con una batería 18650 de 1800 mAh.
+- **Pendiente:** una descarga completa para confirmar el valor. La del mat no se midió.
+
+### 4. Calibración del mat
+- **Iteración 1:** factor 11150. Con un objeto de 6,67 kg el mat leía 11,52 kg.
+- **Corrección:** factor nuevo = factor anterior × (lectura / peso real) ≈ 19260.
+- **Iteración 2:** `FACTOR_ESCALA = 19260.0`.
 
 ---
 
-## Visualización de Datos
+## Encuesta a usuarios
 
-Incluir gráficos generados (exportar desde Excel como PNG):
+Encuesta anónima en Google Forms ("SafeRest: Tecnología para el cuidado de adultos mayores"), con 26 respuestas recibidas entre el 11 y el 22 de noviembre de 2026. 18 personas tienen o tuvieron un adulto mayor cercano y respondieron las 13 preguntas. Las otras 8 solo respondieron las 3 primeras. Es una muestra de conveniencia, no representativa.
 
-- `grafico_usabilidad.png`
-- `grafico_satisfaccion.png`
-- `grafico_impacto_ods.png`
-- `grafico_comparativa_versiones.png`
+| Indicador (18 personas con un adulto mayor cercano) | Resultado |
+|---|---|
+| Se levanta de noche (frecuentemente o a veces) | 16 de 18 (89 %) |
+| Conoce al menos una caída | 12 de 18 (67 %) |
+| Preocupación por una caída nocturna (1 a 5) | Promedio 4,6 |
+| Utilidad percibida de SafeRest (1 a 5) | Promedio 4,6; las 18 respuestas fueron 4 o 5 |
+| Usaría un dispositivo como SafeRest | 15 de 18 (83 %): 5 "Sí" y 10 "Probablemente sí"; nadie respondió que no |
+| Ubicación preferida del compartimento | 15 de 18 (83 %) eligió un compartimento externo conectado a la alfombra |
+| Característica más importante del compartimento | "Que no interfiera al caminar": 13 de 18 (72 %) |
 
-**Herramientas recomendadas:**
-- Excel / Google Sheets
-- Python (matplotlib, seaborn)
-- R / RStudio
+El detalle de cada pregunta está en `testing/reportes/reporte_testing_usuarios.md` y las respuestas originales en `respuestas_encuesta.xlsx`.
+
+---
+
+## Comparación entre iteraciones
+
+| Aspecto | Iteración 1 | Iteración 2 |
+|---|---|---|
+| Umbral de detección | 1 kg (valor de prueba) | 20 kg |
+| Reposo entre alertas | 8 s | 20 s |
+| Factor de calibración | 11150 | 19260 |
+| Alcance medido | Sin medir | ~9 m en línea de vista |
+| Autonomía del control | Sin medir | 24 a 30 h (estimada) |
+| Distinción persona / mascota | No | Sí (20 kg): 5 de 5 personas detectadas y 2 de 2 perros ignorados |
+| Alimentación del mat | Cable USB | UPS con batería 18650 |
+
+---
+
+## Pruebas pendientes
+
+- Probar con personas de menos de 50 kg (por ejemplo, un adulto mayor muy liviano): las 5 personas probadas pesaban entre 51 y 78 kg, así que no se verificó el rango entre 20 y 51 kg.
+- Pruebas formales de usabilidad con más adultos mayores y cuidadores (hasta ahora solo se probó con 2 adultos mayores).
+- Descarga completa de la batería del control y medición del consumo del mat.
+- Probar con más mascotas, en especial perros de peso cercano a 20 kg.
+
+---
+
+## Evidencia
+
+- Videos de las pruebas: `hardware/fotos/` (`v2_prueba_perro.mp4`, `v2_prueba_persona_alcance.mp4`, `v2_prueba_alerta_control.mp4`).
+- Reporte completo: `testing/reportes/reporte_testing_usuarios.md`.
+- Descripción completa de la iteración y sus pruebas: `iteraciones/iteracion_2/README.md`.
