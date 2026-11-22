@@ -57,6 +57,7 @@ Estos materiales se reutilizaron, así que su costo en el BOM es proporcional al
 - Autodesk Fusion 360 (modelado 3D, Fusion Electronics para los esquemas `.fsch`, y scripts en Python mediante su API). Documentación: https://help.autodesk.com/view/fusion360/ENU/
 - Mermaid (diagramas de flujo de `software/docs/`), que GitHub muestra directamente en el README. https://mermaid.js.org
 - GitHub Desktop
+- Google Forms (encuesta a usuarios, ver `testing/`)
 
 ## Referencias del problema (ODS 3 y caídas en adultos mayores)
 
