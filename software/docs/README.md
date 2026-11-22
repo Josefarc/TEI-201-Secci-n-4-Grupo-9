@@ -2,7 +2,7 @@
 
 Documentación del código del mat y del control. Contiene la **versión final (iteración 2)** y, más abajo, la **versión anterior (iteración 1)**, conservada como referencia.
 
-> Las rutas de la versión final son relativas a `software/final/`.
+> Las rutas de esta documentación parten desde la carpeta `software/`. El código de la versión final está en `software/src/` y el de la versión anterior en `software/src/Entrega anterior/`.
 
 ---
 
@@ -131,11 +131,11 @@ flowchart TD
 ## Manual de Instalación
 
 1. Instalar el Arduino IDE 2.x.
-2. Instalar el core ESP8266 (v3.1.2) y las librerías HX711 (bogde, v0.7.5) y Adafruit NeoPixel. Ver `software/librerias/README.md`.
+2. Instalar el core ESP8266 (v3.1.2) y las librerías HX711 (bogde, v0.7.5) y Adafruit NeoPixel (v1.15.5). Ver `software/librerias/README.md`.
 3. Cargar `src/mac/mac.ino` en cada placa y anotar su dirección MAC.
-4. Escribir la MAC del control en `macControl` (`src/mat/mat.ino`) y la del mat en `macMat` (`src/control/control.ino`).
+4. Escribir la MAC del control en `macControl` (`src/mat_final/mat_final.ino`) y la del mat en `macMat` (`src/control_final/control_final.ino`).
 5. Si cambian las celdas o el montaje del mat, volver a calibrar con `src/calibracion/calibracion.ino`: factor nuevo = factor anterior × (lectura / peso real). Escribir el resultado en `FACTOR_ESCALA`. El valor actual es 19260.
-6. Cargar `src/mat/mat.ino` en el Wemos D1 R2 (mat) y `src/control/control.ino` en el Wemos D1 mini (control).
+6. Cargar `src/mat_final/mat_final.ino` en el Wemos D1 R2 (mat) y `src/control_final/control_final.ino` en el Wemos D1 mini (control).
 
 ---
 
@@ -185,11 +185,11 @@ flowchart TD
 
 **Problema 4: La alarma se activa con objetos o mascotas livianas**
 - Causa probable: el umbral es muy bajo para ese peso.
-- Solución: subir `UMBRAL_KG` en `mat.ino` según el peso real de una persona y de la mascota.
+- Solución: subir `UMBRAL_KG` en `mat_final.ino` según el peso real de una persona y de la mascota.
 
 **Problema 5: La alarma no se activa con una persona liviana**
 - Causa probable: su peso es menor que `UMBRAL_KG` (20 kg).
-- Solución: bajar `UMBRAL_KG` en `mat.ino`, cuidando que una mascota no lo supere.
+- Solución: bajar `UMBRAL_KG` en `mat_final.ino`, cuidando que una mascota no lo supere.
 
 **Problema 6: El control recibe la alerta pero el buzzer no suena**
 - Causa probable: el transistor 2N2222 está al revés o la resistencia está mal conectada.
@@ -197,14 +197,14 @@ flowchart TD
 
 **Problema 7: El LED del control sigue naranjo o verde después de desenchufar el cargador**
 - Causa probable: el cargador se detecta por el voltaje de la batería, y con la batería casi llena el voltaje casi no cambia.
-- Solución: es una limitación conocida (ver `limitaciones_deteccion_alimentacion.md`); no afecta la alarma.
+- Solución: es una limitación conocida (ver `iteraciones/iteracion_2/limitaciones_deteccion_alimentacion.md`); no afecta la alarma.
 
 ---
 ---
 
 # Versión anterior (iteración 1)
 
-Se conserva el texto de la entrega anterior como referencia.
+Se conserva el texto de la entrega anterior como referencia. El código de esa versión está en `src/Entrega anterior/`.
 
 ## Contenido
 
@@ -274,10 +274,10 @@ flowchart TD
 
 1. Instalar el Arduino IDE 2.x.
 2. Instalar el core ESP8266 (v3.1.2) y la librería HX711 (v0.7.5). Ver `software/librerias/README.md`.
-3. Cargar `src/mac/mac.ino` en cada placa y anotar su dirección MAC.
-4. Escribir la MAC del control en `macControl` (`src/mat/mat.ino`) y la del mat en `macMat` (`src/control/control.ino`).
-5. Calibrar el mat con `src/calibracion/calibracion.ino` (ver "Calibración del Mat" en `software/README.md`) y escribir el resultado en `FACTOR_ESCALA`.
-6. Cargar `src/mat/mat.ino` en el Wemos D1 (mat) y `src/control/control.ino` en el Wemos D1 Mini (control).
+3. Cargar `src/Entrega anterior/mac/mac.ino` en cada placa y anotar su dirección MAC.
+4. Escribir la MAC del control en `macControl` (`src/Entrega anterior/mat/mat.ino`) y la del mat en `macMat` (`src/Entrega anterior/control/control.ino`).
+5. Calibrar el mat con `src/Entrega anterior/calibracion/calibracion.ino` (ver "Calibración del Mat" en `software/README.md`) y escribir el resultado en `FACTOR_ESCALA`.
+6. Cargar `src/Entrega anterior/mat/mat.ino` en el Wemos D1 (mat) y `src/Entrega anterior/control/control.ino` en el Wemos D1 Mini (control).
 
 ---
 
