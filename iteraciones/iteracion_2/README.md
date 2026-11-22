@@ -122,8 +122,9 @@ Incluidos en la carpeta `v2_fotos/`:
 ✅ Calibración con peso conocido  
 ✅ Alcance de la comunicación medido  
 ✅ Prueba con personas y con mascotas  
-✅ Autonomía del control estimada en 24 a 30 horas (ver Resultados)  
-⚠️ Detección de cargador conectado limitada cuando la batería ya está casi llena (ver `limitaciones_deteccion_alimentacion.md`)
+✅ Autonomía del control estimada en 24 a 30 horas (ver "Autonomía de la batería")  
+⚠️ Detección de cargador conectado limitada cuando la batería ya está casi llena (ver `limitaciones_deteccion_alimentacion.md`)  
+⚠️ El mat no avisa de un corte de luz; sigue funcionando con su batería (ver `limitaciones_deteccion_alimentacion.md`)
 
 ### Calibración
 
@@ -203,6 +204,11 @@ Es una estimación a partir de la caída de voltaje, no una medición hasta el a
    - Prioridad: Media
    - Mejora futura: que el mat reintente o avise con su propia luz o sonido.
 
+7. **Sin aviso de corte de luz en el mat:**
+   - Descripción: el mat sigue funcionando con su batería durante un corte de luz, pero no avisa al control que hubo un corte. El módulo UPS no tiene un pad que indique solo la presencia del cargador.
+   - Prioridad: Baja
+   - Mejora futura: usar un módulo de carga con un pin de estado (por ejemplo, CHRG/STDBY de un TP4056).
+
 ### Problemas de la iteración 1 y su estado
 
 | Problema de la iteración 1 | Estado en la iteración 2 |
@@ -248,9 +254,10 @@ Es una estimación a partir de la caída de voltaje, no una medición hasta el a
 
 ## Archivos en esta Carpeta
 
-- `mat.ino` - Código del mat
-- `control.ino` - Código del control
-- `esquema_mat.png` - Esquema del circuito del mat
-- `esquema_control.png` - Esquema del circuito del control
+- `codigo_final_mat.ino` - Código del mat
+- `codigo_final_control.ino` - Código del control
+- `esquema_mat_final.png` - Esquema del circuito del mat
+- `esquema_control_final.png` - Esquema del circuito del control
+- `limitaciones_deteccion_alimentacion.md` - Funciones que no se implementaron como se planeó (detección del cargador y aviso de corte de luz)
 - `v2_fotos/` - Fotografías y videos del prototipo
-- `v2_notas.md` - Problemas identificados y mejoras planificadas
+- `v2_notas.md` - Problemas resueltos, limitaciones, problemas pendientes y mejoras planificadas
