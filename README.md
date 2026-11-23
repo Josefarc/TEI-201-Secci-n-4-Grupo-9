@@ -50,7 +50,7 @@ El detalle está en `testing/`.
 │   └── datos/        # Datos de las pruebas y de la encuesta
 ├── documentacion/    # Informe final y presentación
 ├── iteraciones/      # Evidencia del desarrollo y cambios del diseño
-│   ├── iteracion_1/  # Concepto inicial (Avance #1)
+│   ├── iteracion_1/  # Prototipo alpha (Avance #2)
 │   └── iteracion_2/  # Versión final (Avance #3)
 └── FUENTES.md        # Bibliografía, datasheets y librerías utilizadas
 ```
@@ -97,19 +97,19 @@ La comparación entre ambas está en `iteraciones/README.md`.
 - [x] Librerías documentadas
 - [x] Manual de instalación
 
-### Diseño 3D
-- [ ] Archivos Fusion 360 (.f3d) con TODOS los componentes
-- [ ] Renders de alta calidad (1+ ángulos)
-- [ ] Planos técnicos
+### Diseño 3D ✓
+- [x] Archivos Fusion 360 (.f3d) con TODOS los componentes
+- [x] Renders de alta calidad (1+ ángulos)
+- [x] Planos técnicos
 
 ### Testing ✓
 - [x] Reporte de testing con usuarios (mín. 5)
 - [x] Evidencias fotográficas/videos
 - [x] Datos cuantitativos
 
-### Documentación
-- [ ] Reporte final (máx. 15 páginas)
-- [ ] Presentación (10 min)
+### Documentación ✓
+- [x] Reporte final (máx. 15 páginas)
+- [x] Presentación (10 min)
 
 ---
 
