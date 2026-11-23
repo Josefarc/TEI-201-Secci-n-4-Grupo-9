@@ -107,10 +107,13 @@ Incluidos en la carpeta `v2_fotos/`:
 - `v2_prueba_perro.mp4`: un perro de 18 kg sobre el mat, sin alarma
 - `v2_prueba_persona_alcance.mp4`: una persona se sube al mat y la cámara sigue hasta el control, que está en el velador de **otra habitación** y suena y enciende el LED
 - `v2_prueba_alerta_control.mp4`: el mat y el control, con el LED del control encendido durante la alerta
+- `v2_prueba_corte_energia.mp4`: el mat conectado al cargador USB; se desenchufa el cargador de la pared para simular un corte de luz y el mat sigue funcionando con su batería, sin reiniciarse
 
 ---
 
 ## Resultados de Testing
+
+Los datos completos de las pruebas, la encuesta y el reporte con usuarios están en la carpeta `testing/` del repositorio.
 
 ### Funcionalidad Lograda
 ✅ El mat lee el peso con las 4 celdas de carga con lecturas estables (variación entre 0,0 y 0,2 kg en reposo, sin cambios al mover los cables)  
@@ -119,9 +122,11 @@ Incluidos en la carpeta `v2_fotos/`:
 ✅ El mat respeta el tiempo de reposo entre alertas  
 ✅ LED de estado en el mat y en el control  
 ✅ Mat y control funcionan con su respaldo de batería  
+✅ El mat sigue funcionando con su batería al cortarse la luz (cargador desenchufado), sin reiniciarse  
 ✅ Calibración con peso conocido  
 ✅ Alcance de la comunicación medido  
-✅ Prueba con personas y con mascotas  
+✅ Prueba con 5 personas (2 adultos mayores) y 2 perros: las 5 personas activaron la alarma y los perros no  
+✅ Encuesta a usuarios con 26 respuestas  
 ✅ Autonomía del control estimada en 24 a 30 horas (ver "Autonomía de la batería")  
 ⚠️ Detección de cargador conectado limitada cuando la batería ya está casi llena (ver `limitaciones_deteccion_alimentacion.md`)  
 ⚠️ El mat no avisa de un corte de luz; sigue funcionando con su batería (ver `limitaciones_deteccion_alimentacion.md`)
@@ -136,12 +141,21 @@ Incluidos en la carpeta `v2_fotos/`:
 
 | Quién se sube al mat | Resultado |
 |---|---|
-| Persona de más de 20 kg | Se activa la alerta: el control suena y se enciende el LED blanco, incluso estando en otra habitación |
+| Persona de 51 kg | Se activa la alerta |
+| Persona de 55 kg | Se activa la alerta |
+| Persona de 57 kg | Se activa la alerta |
+| Persona de 65 kg (adulta mayor, 78 años) | Se activa la alerta |
+| Persona de 78 kg (adulto mayor, 61 años) | Se activa la alerta |
 | Perro de 18 kg | Sin alerta |
+| Perro de 15 kg | Sin alerta |
 
-El mat distingue a una persona de una mascota liviana. Esto es importante para evitar falsas alarmas en casas con animales.
+Cuando la alerta se activa, el control suena y se enciende el LED blanco, incluso estando en otra habitación. El mat distingue a una persona de una mascota liviana, lo que evita falsas alarmas en casas con animales.
 
-Con el umbral de 20 kg, el mat no alerta con mascotas de menos de ese peso (probado con un perro de 18 kg). Un animal más pesado, o una persona de menos de 20 kg, podría activarlo o no detectarse, por lo que el umbral es ajustable en el código (`UMBRAL_KG`).
+Con el umbral de 20 kg, el mat no alerta con mascotas de menos de ese peso (probado con perros de 18 y 15 kg). Las personas probadas pesaban entre 51 y 78 kg, así que el rango entre 20 y 51 kg no se verificó. Un animal más pesado, o una persona de menos de 20 kg, podría activarlo o no detectarse, por lo que el umbral es ajustable en el código (`UMBRAL_KG`).
+
+### Prueba de corte de energía
+
+Con el mat encendido y vacío, conectado al cargador USB, se desenchufó el cargador de la pared para simular un corte de luz. El mat no se reinició (no repitió el LED amarillo ni los 3 destellos verdes) y siguió funcionando con la batería 18650. No se midió cuánto dura el mat solo con su batería. Video: `v2_prueba_corte_energia.mp4`.
 
 ### Alcance de la comunicación (ESP-NOW)
 
@@ -160,17 +174,27 @@ Se midió el control en reposo (sin alarma) con una batería 18650 de 1800 mAh, 
 
 Es una estimación a partir de la caída de voltaje, no una medición hasta el apagado. El consumo sube mientras suena la alarma (buzzer y LED encendidos). La autonomía del mat no se midió por separado.
 
+### Encuesta a usuarios
+
+Encuesta anónima en Google Forms con 26 respuestas (11 al 22 de noviembre de 2026). 18 personas tienen o tuvieron un adulto mayor cercano y respondieron todas las preguntas.
+- Preocupación por una caída nocturna: promedio de 4,6 sobre 5.
+- Utilidad percibida de SafeRest: promedio de 4,6 sobre 5 (las 18 respuestas fueron 4 o 5).
+- 83 % lo usaría o probablemente lo usaría.
+- 83 % prefirió un compartimento externo conectado a la alfombra, como el diseño del prototipo.
+
+El detalle está en `testing/reportes/README.md` y los datos en `testing/datos/`.
+
 ### Feedback del Avance #2
 
 **Comentarios del profesor/ayudante:**
 1. Calibrar el mat con más peso para comprobar que funciona.
-   - Acción: se calibró con un peso conocido (6,67 kg), se fijó el umbral en 20 kg y se probó con personas de más de 20 kg y con mascotas.
+   - Acción: se calibró con un peso conocido (6,67 kg), se fijó el umbral en 20 kg y se probó con 5 personas de entre 51 y 78 kg y con 2 perros.
 2. Revisar el tema de las baterías.
-   - Acción: se instaló el UPS con batería 18650 en el mat (el control ya lo tenía), el control mide su voltaje por A0, se midió el alcance de la comunicación y se estimó la autonomía del control en 24 a 30 horas.
+   - Acción: se instaló el UPS con batería 18650 en el mat (el control ya lo tenía), el control mide su voltaje por A0, se probó que el mat sigue funcionando al cortarse la luz, se midió el alcance de la comunicación y se estimó la autonomía del control en 24 a 30 horas.
 3. Incluir alguna luz LED.
    - Acción: se agregó un LED WS2812 en el mat (estado) y en el control (alarma y batería).
 4. Hacer pruebas con personas.
-   - Acción: se probó el mat con personas y con mascotas (ver arriba). La evaluación de usabilidad con adultos mayores y cuidadores queda pendiente.
+   - Acción: se probó el mat con 5 personas (2 de ellas adultos mayores) y con 2 mascotas, y se hizo una encuesta con 26 respuestas (ver arriba). La evaluación de usabilidad con más adultos mayores y cuidadores en su entorno queda pendiente.
 
 ---
 
@@ -192,20 +216,21 @@ Es una estimación a partir de la caída de voltaje, no una medición hasta el a
    - Mejora futura: repetidor ESP-NOW o antena de mayor ganancia.
 
 4. **Autonomía medida solo de forma aproximada:**
-   - Descripción: la autonomía del control se estimó por la caída de voltaje; la del mat no se midió por separado.
+   - Descripción: la autonomía del control se estimó por la caída de voltaje; la del mat no se midió por separado, así que tampoco se sabe cuánto dura solo con su batería.
    - Prioridad: Baja
    - Mejora futura: medir el tiempo real hasta el apagado de cada equipo, y con la alarma sonando.
 
-5. **Sin evaluación de usabilidad con adultos mayores y cuidadores:**
+5. **Usabilidad con adultos mayores y cuidadores limitada:**
+   - Descripción: el mat se probó con 2 adultos mayores y se hizo una encuesta, pero no hubo pruebas de uso prolongado con cuidadores en su entorno. Tampoco se probó con personas de menos de 51 kg.
    - Prioridad: Media
-   - Mejora futura: probar con el público objetivo y recoger su opinión.
+   - Mejora futura: probar con el público objetivo, incluidas personas más livianas, y recoger su opinión.
 
 6. **Alerta con "Entrega FALLO":** si el control está apagado, fuera de alcance o con otra MAC o canal, el mat no puede avisar.
    - Prioridad: Media
    - Mejora futura: que el mat reintente o avise con su propia luz o sonido.
 
 7. **Sin aviso de corte de luz en el mat:**
-   - Descripción: el mat sigue funcionando con su batería durante un corte de luz, pero no avisa al control que hubo un corte. El módulo UPS no tiene un pad que indique solo la presencia del cargador.
+   - Descripción: el mat sigue funcionando con su batería durante un corte de luz (probado desenchufando el cargador), pero no avisa al control que hubo un corte. El módulo UPS no tiene un pad que indique solo la presencia del cargador.
    - Prioridad: Baja
    - Mejora futura: usar un módulo de carga con un pin de estado (por ejemplo, CHRG/STDBY de un TP4056).
 
@@ -214,7 +239,7 @@ Es una estimación a partir de la caída de voltaje, no una medición hasta el a
 | Problema de la iteración 1 | Estado en la iteración 2 |
 |---|---|
 | El interruptor del UPS no apaga los pads 5V/GND | Se agregó un interruptor KCD11 en la entrada de 5 V |
-| Mat sin respaldo de energía | UPS con batería 18650 instalado en el mat |
+| Mat sin respaldo de energía | UPS con batería 18650 instalado en el mat; probado con un corte de luz simulado |
 | Circuito en protoboard | Resuelto en el mat; el control aún usa una mini protoboard |
 | Umbral de peso sin calibrar | Calibrado con peso conocido; umbral de 20 kg |
 
@@ -232,7 +257,7 @@ Es una estimación a partir de la caída de voltaje, no una medición hasta el a
 | Indicadores | Solo buzzer | Buzzer + LED en el control, LED en el mat |
 | Montaje | Protoboard | Mat: caja sin protoboard; control: caja con mini protoboard |
 | Estructura del mat | Marco de madera con alfombra | Base de acero galvanizado y acrílico |
-| Pruebas | Con un objeto | Con personas y mascotas, y alcance medido |
+| Pruebas | Con un objeto | Con 5 personas y 2 perros, alcance medido, corte de energía y encuesta de 26 respuestas |
 | Costo documentado | No | BOM con total de $113.520 |
 
 ---
