@@ -88,7 +88,7 @@ Cuestionario de 13 preguntas en Google Forms, con tres bloques:
 | Perro 1 | 18 kg | Sin alarma | Sin alarma |
 | Perro 2 | 15 kg | Sin alarma | Sin alarma |
 
-**Resultado: 7 de 7 pruebas correctas.** Las 5 personas activaron la alarma y los 2 perros no. El control también sonó con el control en otra habitación.
+**Resultado: 7 de 7 pruebas correctas.** Las 5 personas activaron la alarma y los 2 perros no. La alarma también sonó con el control en otra habitación.
 
 ### 4.2 Alcance de la comunicación
 | Escenario | Distancia | Resultado |
