@@ -2,7 +2,9 @@
 
 ## Propósito
 
-Esta carpeta documenta la evolución del prototipo a través de las dos versiones desarrolladas durante el curso: el concepto inicial (iteración 1) y la versión final (iteración 2).
+Esta carpeta documenta la evolución del prototipo a través de las dos versiones desarrolladas durante el curso: el prototipo alpha (iteración 1, Avance #2) y la versión final (iteración 2, Avance #3).
+
+El Avance #1 fue solo una presentación con la teoría básica y el informe inicial, sin prototipo armado, por lo que no tiene carpeta de iteración.
 
 El proceso iterativo se puede seguir comparando ambas carpetas: cada una tiene su descripción, fotos, esquemas, código y notas de esa versión.
 
@@ -14,7 +16,7 @@ Cada iteración tiene su propia carpeta con la documentación de esa versión:
 
 ```
 iteraciones/
-├── iteracion_1/    # Concepto inicial - Prototipo alpha (Avance #1)
+├── iteracion_1/    # Prototipo alpha (Avance #2)
 └── iteracion_2/    # Versión final - Prototipo funcional (Avance #3)
 ```
 
@@ -51,7 +53,7 @@ Cada carpeta incluye:
 
 ## Evolución del Diseño
 
-### Versión 1 (Iteración 1) - Concepto Inicial
+### Versión 1 (Iteración 1) - Prototipo Alpha
 **Fecha:** 19/10/2026  
 **Estado:** Prototipo alpha - Prueba de concepto
 
