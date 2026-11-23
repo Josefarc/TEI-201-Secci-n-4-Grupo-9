@@ -14,7 +14,7 @@ Reporte de testing con usuarios: participantes, protocolo, resultados, conclusio
 Descripción de los videos y fotos de las pruebas. Los archivos están en `hardware/fotos/`.
 
 #### `datos/`
-Datos de las pruebas (detección, alcance, autonomía y calibración) y de la encuesta, incluidos el Excel con las respuestas originales (`respuestas_encuesta.xlsx`) y los gráficos de cada pregunta (`Resultados_encuesta_SafeRest.pdf`).
+Datos de las pruebas (detección, alcance, autonomía, calibración y corte de energía) y de la encuesta, incluidos el Excel con las respuestas originales (`respuestas_encuesta.xlsx`) y los gráficos de cada pregunta (`Resultados_encuesta_SafeRest.pdf`).
 
 ---
 
@@ -26,6 +26,7 @@ Se hicieron dos tipos de evaluación sobre la versión final del prototipo (iter
 - **Participantes:** 5 personas de 51, 55, 57, 65 y 78 kg (2 de ellas adultos mayores, de 78 y 61 años) y 2 perros de 18 y 15 kg.
 - **Procedimiento:** con el mat encendido y vacío (para que tome el cero), cada persona pisa el mat y se observa si el control suena. Lo mismo con cada perro. También se probó con el control en otra habitación.
 - **Alcance y autonomía:** se probó la comunicación a distintas distancias y con distintas paredes, y se midió el voltaje de la batería del control para estimar su duración.
+- **Corte de energía:** con el mat encendido y conectado al cargador USB, se desenchufó el cargador para simular un corte de luz y se observó si el mat se reiniciaba.
 - **Umbral de detección:** 20 kg, con al menos 20 s entre alertas.
 
 ### 2. Encuesta a usuarios
@@ -62,6 +63,7 @@ El detalle completo está en `datos/README.md` y en `reportes/README.md`.
 **Qué se validó:**
 - El prototipo detecta a personas de más de 20 kg y no se activa con mascotas pequeñas.
 - La alerta llega al cuidador sin WiFi ni internet, hasta ~9 m en línea de vista.
+- Si se corta la luz, el mat sigue funcionando con su batería.
 - La encuesta muestra la necesidad: 89 % de las personas con un adulto mayor cercano dice que este se levanta de noche al menos a veces, y 67 % conoce al menos una caída.
 - La encuesta muestra aceptación: utilidad percibida de 4,6 de 5 y 83 % lo usaría.
 
@@ -72,5 +74,5 @@ El detalle completo está en `datos/README.md` y en `reportes/README.md`.
 ## Limitaciones y pendientes
 - Las personas probadas pesaban entre 51 y 78 kg, así que no se verificó el rango entre 20 y 51 kg.
 - Solo se probó con 2 adultos mayores. Faltan pruebas de usabilidad con más adultos mayores y cuidadores.
-- La autonomía del control es una estimación y no se midió el consumo del mat.
+- La autonomía del control es una estimación y no se midió el consumo del mat, así que tampoco se sabe cuánto dura el mat solo con su batería.
 - La encuesta es una muestra de conveniencia, no representativa.
