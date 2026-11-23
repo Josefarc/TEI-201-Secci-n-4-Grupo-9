@@ -70,6 +70,7 @@ Fotografías del prototipo ensamblado. Las de la iteración 1 están en `Fotos p
 **Alimentación:** mat y control: 5 V desde un módulo UPS con batería 18650 de 3,7 V (carga por micro-USB)  
 **Consumo:** control en reposo ~60 mA (estimado); mat sin medir  
 **Autonomía:** control 24 a 30 horas (estimada)  
+**Respaldo ante corte de luz:** el mat sigue funcionando con su batería 18650 al desenchufar el cargador, sin reiniciarse (probado)
 **Dimensiones del mat:** 51 cm x 82 cm (sobre una base de acero galvanizado de 50 cm x 81 cm y acrílico de 49 cm x 80 cm)  
 **Dimensiones de las cajas:** caja del mat 150 mm x 110 mm x 70 mm; caja del control 120 mm x 80 mm x 47,5 mm  
 **Comunicación:** ESP-NOW entre mat y control (sin WiFi ni router)  
