@@ -45,7 +45,7 @@ Cada carpeta incluye:
 | **Encendido** | Desconectando el cable | Interruptor KCD11 en mat y control |
 | **Encapsulado** | Mat: marco de madera con alfombra; control: diseño 3D | Mat: caja eléctrica, base de acero galvanizado y acrílico; control: caja impresa en 3D |
 | **Montaje del circuito** | Protoboard | Mat: sin protoboard; control: mini protoboard dentro de la caja |
-| **Testing** | Solo el equipo, con un objeto | Personas y mascotas; alcance medido; autonomía estimada |
+| **Testing** | Solo el equipo, con un objeto | 5 personas y 2 perros; alcance medido; corte de energía del mat; autonomía estimada; encuesta de 26 respuestas |
 
 ---
 
@@ -85,16 +85,17 @@ Cada carpeta incluye:
 - Tiempo de reposo de 20 s entre alertas
 - Estructura nueva del mat: base de acero galvanizado y acrílico sobre las celdas
 - Circuitos dentro de cajas (caja eléctrica para el mat y caja impresa en 3D para el control)
-- Pruebas con personas y mascotas, alcance medido y autonomía estimada
+- Pruebas con 5 personas (2 adultos mayores) y 2 perros, alcance medido, corte de energía del mat y autonomía estimada
+- Encuesta anónima a usuarios con 26 respuestas
 
 **Problemas pendientes:**
 - El control aún usa una mini protoboard sin soldar
 - La señal ESP-NOW no atraviesa bien paredes de concreto
 - No se detecta de forma directa el cargador ni el corte de luz (ver `limitaciones_deteccion_alimentacion.md`)
-- Sin evaluación de usabilidad con adultos mayores y cuidadores
+- Usabilidad con adultos mayores y cuidadores limitada: no hubo pruebas de uso prolongado en su entorno
 
 **Resultado:**
-- Sistema completo que detecta a una persona de más de 20 kg sobre el mat, avisa al control (incluso en otra habitación) con sonido y luz, y se silencia con un pulsador. No alerta con una mascota de 18 kg.
+- Sistema completo que detecta a una persona sobre el mat (probado entre 51 y 78 kg), avisa al control (incluso en otra habitación) con sonido y luz, y se silencia con un pulsador. No alertó con perros de 18 y 15 kg. Si se corta la luz, el mat sigue funcionando con su batería.
 
 ---
 
@@ -104,7 +105,7 @@ Cada carpeta incluye:
 **De v1 a v2:**
 - **Cambio:** UPS con batería 18650 en el mat.
   - Razón: en la iteración 1 el mat dependía de la alimentación por cable y no funcionaba en un corte de luz.
-  - Impacto: el mat sigue funcionando con la batería.
+  - Impacto: el mat sigue funcionando con la batería; se probó desenchufando el cargador, sin que se reiniciara.
 - **Cambio:** interruptor KCD11 en la entrada de 5 V del mat y del control.
   - Razón: el interruptor del UPS solo cortaba la salida USB-A y la batería se descargaba igual.
   - Impacto: se pueden apagar los dos equipos sin desconectar cables.
@@ -137,16 +138,24 @@ Cada carpeta incluye:
 
 ### Feedback del Avance #2 → Cambios en v2
 1. Calibrar el mat con más peso para comprobar que funciona.
-   - Acción tomada: se calibró con un peso conocido (6,67 kg), se fijó el umbral en 20 kg y se probó con personas de más de 20 kg y con una mascota de 18 kg.
+   - Acción tomada: se calibró con un peso conocido (6,67 kg), se fijó el umbral en 20 kg y se probó con 5 personas de entre 51 y 78 kg y con 2 perros.
 2. Revisar el tema de las baterías.
-   - Acción tomada: UPS con batería 18650 en el mat, medición de voltaje en el control y autonomía estimada en 24 a 30 horas.
+   - Acción tomada: UPS con batería 18650 en el mat, prueba de corte de luz del mat, medición de voltaje en el control y autonomía del control estimada en 24 a 30 horas.
 3. Incluir alguna luz LED.
    - Acción tomada: LED WS2812 en el mat (estado) y en el control (alarma y batería).
 4. Hacer pruebas con personas.
-   - Acción tomada: se probó con personas y mascotas; la evaluación con adultos mayores y cuidadores queda pendiente.
+   - Acción tomada: se probó con 5 personas (2 adultos mayores) y 2 perros, y se hizo una encuesta a usuarios. La evaluación con más adultos mayores y cuidadores en su entorno queda pendiente.
 
 ### Feedback de Usuarios
-- Aún no se realizaron pruebas de usabilidad con adultos mayores ni cuidadores (ver Problemas pendientes de la iteración 2).
+Encuesta anónima en Google Forms, con 26 respuestas entre el 11 y el 22 de noviembre de 2026. 18 personas tienen o tuvieron un adulto mayor cercano y respondieron todas las preguntas:
+- 89 % se levanta de noche al menos a veces (16 de 18) y 67 % conoce una caída (12 de 18).
+- Preocupación por una caída nocturna: promedio de 4,6 sobre 5.
+- Utilidad percibida de SafeRest: promedio de 4,6 sobre 5 (las 18 respuestas fueron 4 o 5).
+- 83 % lo usaría o probablemente lo usaría (15 de 18; nadie respondió "no").
+- 83 % prefirió un compartimento externo conectado a la alfombra, como el diseño del prototipo.
+- 72 % considera lo más importante que no moleste al caminar.
+
+Es una muestra por conveniencia, no representativa. El detalle está en `testing/reportes/README.md` y los datos en `testing/datos/`.
 
 ---
 
@@ -154,11 +163,12 @@ Cada carpeta incluye:
 
 | Métrica | v1 | v2 | Mejora |
 |---------|----|----|--------|
-| Umbral de detección | 1 kg (valor de prueba) | 20 kg (calibrado) | Detecta a una persona sin alertar con una mascota de 18 kg |
+| Umbral de detección | 1 kg (valor de prueba) | 20 kg (calibrado) | Detecta a las 5 personas (51 a 78 kg) sin alertar con perros de 18 y 15 kg |
 | Calibración del peso | Sin calibrar | Factor corregido (11150 → ≈ 19260) | Con el factor inicial el mat marcaba 11,52 kg para un objeto de 6,67 kg (73 % de error); con el nuevo factor coincide con el peso real |
 | Estabilidad en reposo | Sin medir | 0,0 a 0,2 kg | - |
 | Alcance de ESP-NOW | Sin medir | ~9 m en línea de vista; 7,3 m con 2 tabiques de yeso cartón; 3 a 4 m con 1 pared de concreto | Alcance medido |
 | Autonomía del control | Sin medir | 24 a 30 horas (estimada) | Estimación |
+| Corte de luz en el mat | Sin respaldo | Sigue funcionando con su batería, sin reiniciarse | Probado |
 | Costo documentado | No | BOM con total de $113.520 CLP | Costo conocido |
 
 ---
@@ -179,3 +189,4 @@ Cada carpeta incluye:
 - Conviene medir el alcance y la autonomía con pruebas simples y anotarlas, aunque sean aproximadas.
 - Hay que guardar y versionar el código final de cada placa en el repositorio, junto con el esquema y las fotos de esa versión.
 - Documentar el costo (BOM) y las fuentes desde el principio evita rehacerlos al final.
+- Una encuesta corta con usuarios reales aporta evidencia rápida de utilidad, aunque no sea una muestra representativa.
