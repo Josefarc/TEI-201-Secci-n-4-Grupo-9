@@ -9,6 +9,7 @@ Resultados de las pruebas del prototipo SafeRest y de la encuesta a usuarios. Lo
 | Archivo | Contenido |
 |---|---|
 | `respuestas_encuesta.xlsx` | Respuestas originales de la encuesta (26 respuestas, anónimas), exportadas de Google Forms |
+| `Resultados_encuesta_SafeRest.pdf` | Gráficos con los resultados de cada pregunta de la encuesta, exportados de Google Forms |
 
 El resto de los datos, es decir las pruebas del prototipo, están en este mismo README.
 
@@ -24,6 +25,7 @@ El resto de los datos, es decir las pruebas del prototipo, están en este mismo 
 | Alcance ESP-NOW, yeso cartón | 2 tabiques (3 habitaciones) | 7,3 m |
 | Alcance ESP-NOW, concreto | Pared de concreto de 22 cm | 3 a 4 m; a ~9 m no llegó la señal |
 | Autonomía del control | Batería 18650 de 1800 mAh, ~60 mA en reposo | 24 a 30 h (estimada) |
+| Corte de energía del mat | Se desenchufa el cargador con el mat encendido | Sigue funcionando con la batería, sin reiniciarse |
 | Calibración | Objeto de 6,67 kg con el factor inicial | Leía 11,52 kg; factor corregido a 19260 |
 | Encuesta | 26 respuestas anónimas (18 con un adulto mayor cercano) | Utilidad percibida 4,6 de 5; 83 % lo usaría o probablemente lo usaría |
 
@@ -71,6 +73,13 @@ Conclusión: en una casa con tabiques el alcance es suficiente, pero las paredes
 - **Corrección:** factor nuevo = factor anterior × (lectura / peso real) ≈ 19260.
 - **Iteración 2:** `FACTOR_ESCALA = 19260.0`.
 
+### 5. Corte de energía del mat
+- **Objetivo:** comprobar que el mat sigue funcionando si se corta la luz, gracias a su batería 18650.
+- **Procedimiento:** con el mat vacío, encendido y conectado al cargador USB (que carga el módulo UPS), se desenchufó el cargador para simular un corte de luz.
+- **Resultado:** el mat no se reinició (no repitió el LED amarillo ni los 3 destellos verdes) y siguió funcionando con la batería.
+- **Límites de la prueba:** no se midió cuánto dura el mat solo con la batería, porque el consumo del mat no se midió.
+- **Video:** `hardware/fotos/v2_prueba_corte_energia.mp4`.
+
 ---
 
 ## Encuesta a usuarios
@@ -87,7 +96,7 @@ Encuesta anónima en Google Forms ("SafeRest: Tecnología para el cuidado de adu
 | Ubicación preferida del compartimento | 15 de 18 (83 %) eligió un compartimento externo conectado a la alfombra |
 | Característica más importante del compartimento | "Que no interfiera al caminar": 13 de 18 (72 %) |
 
-El detalle de cada pregunta está en `testing/reportes/reporte_testing_usuarios.md` y las respuestas originales en `respuestas_encuesta.xlsx`.
+El detalle de cada pregunta está en `testing/reportes/README.md`, los gráficos de cada pregunta en `Resultados_encuesta_SafeRest.pdf` y las respuestas originales en `respuestas_encuesta.xlsx`.
 
 ---
 
@@ -101,7 +110,7 @@ El detalle de cada pregunta está en `testing/reportes/reporte_testing_usuarios.
 | Alcance medido | Sin medir | ~9 m en línea de vista |
 | Autonomía del control | Sin medir | 24 a 30 h (estimada) |
 | Distinción persona / mascota | No | Sí (20 kg): 5 de 5 personas detectadas y 2 de 2 perros ignorados |
-| Alimentación del mat | Cable USB | UPS con batería 18650 |
+| Alimentación del mat | Cable USB | UPS con batería 18650: sigue funcionando si se corta la luz |
 
 ---
 
@@ -109,13 +118,13 @@ El detalle de cada pregunta está en `testing/reportes/reporte_testing_usuarios.
 
 - Probar con personas de menos de 50 kg (por ejemplo, un adulto mayor muy liviano): las 5 personas probadas pesaban entre 51 y 78 kg, así que no se verificó el rango entre 20 y 51 kg.
 - Pruebas formales de usabilidad con más adultos mayores y cuidadores (hasta ahora solo se probó con 2 adultos mayores).
-- Descarga completa de la batería del control y medición del consumo del mat.
+- Descarga completa de la batería del control y medición del consumo del mat (para saber cuánto dura el mat solo con la batería).
 - Probar con más mascotas, en especial perros de peso cercano a 20 kg.
 
 ---
 
 ## Evidencia
 
-- Videos de las pruebas: `hardware/fotos/` (`v2_prueba_perro.mp4`, `v2_prueba_persona_alcance.mp4`, `v2_prueba_alerta_control.mp4`).
-- Reporte completo: `testing/reportes/reporte_testing_usuarios.md`.
+- Videos de las pruebas: `hardware/fotos/` (`v2_prueba_perro.mp4`, `v2_prueba_persona_alcance.mp4`, `v2_prueba_alerta_control.mp4`, `v2_prueba_corte_energia.mp4`).
+- Reporte completo: `testing/reportes/README.md`.
 - Descripción completa de la iteración y sus pruebas: `iteraciones/iteracion_2/README.md`.
