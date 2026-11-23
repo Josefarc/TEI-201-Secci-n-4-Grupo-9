@@ -77,7 +77,8 @@ Conclusión: en una casa con tabiques el alcance es suficiente, pero las paredes
 - **Objetivo:** comprobar que el mat sigue funcionando si se corta la luz, gracias a su batería 18650.
 - **Procedimiento:** con el mat vacío, encendido y conectado al cargador USB (que carga el módulo UPS), se desenchufó el cargador para simular un corte de luz.
 - **Resultado:** el mat no se reinició (no repitió el LED amarillo ni los 3 destellos verdes) y siguió funcionando con la batería.
-- **Límites de la prueba:** no se midió cuánto dura el mat solo con la batería, porque el consumo del mat no se midió.
+- **Límites de la prueba:** no se midió cuánto dura el mat solo con la batería, porque el consumo del mat no se midió. Tampoco se probó el desenchufe del cargador en el control.
+- **Video:** `hardware/fotos/v2_prueba_corte_energia.mp4`.
 
 ---
 
@@ -124,6 +125,6 @@ El detalle de cada pregunta está en `testing/reportes/README.md`, los gráficos
 
 ## Evidencia
 
-- Videos de las pruebas: `hardware/fotos/` (`v2_prueba_perro.mp4`, `v2_prueba_persona_alcance.mp4`, `v2_prueba_alerta_control.mp4`).
+- Videos de las pruebas: `hardware/fotos/` (`v2_prueba_perro.mp4`, `v2_prueba_persona_alcance.mp4`, `v2_prueba_alerta_control.mp4`, `v2_prueba_corte_energia.mp4`).
 - Reporte completo: `testing/reportes/README.md`.
 - Descripción completa de la iteración y sus pruebas: `iteraciones/iteracion_2/README.md`.
