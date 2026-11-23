@@ -19,6 +19,11 @@
 #### `fusion360/`
 Archivos nativos de Fusion 360 (.f3d)
 
+## Nota para el ayudante
+
+Fusion no permite exportar a .png por lo que se utilizó .stl
+
+
 #### `renders/`
 Imágenes renderizadas de alta calidad
 
