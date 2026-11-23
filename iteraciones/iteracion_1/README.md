@@ -1,11 +1,11 @@
-# Iteración 1 - Concepto Inicial
+# Iteración 1 - Prototipo Alpha
 
 ## Información General
 
 **Fecha:** 19/10/2026  
 **Versión:** v1.0  
 **Estado:** Prototipo alpha - Prueba de concepto  
-**Avance asociado:** Planificación inicial / Avance #1
+**Avance asociado:** Avance #2
 
 ---
 
@@ -66,7 +66,6 @@ Incluidas en la carpeta `v1_fotos/`:
 ❌ Alcance de ESP-NOW y autonomía de la batería sin medir  
 ❌ Sin pruebas con usuarios
 
-
 ---
 
 ### Problemas Identificados
@@ -75,9 +74,11 @@ Incluidas en la carpeta `v1_fotos/`:
 3. **Circuito en protoboard:** conexiones frágiles y cables sueltos. Solución: pasar a una placa perforada e imprimir las cajas diseñadas.
 4. **Umbral de peso sin calibrar:** `UMBRAL_KG` es un valor de prueba (1 kg). Solución: calibrar con un peso más alto y probar con objetos más pesados.
 
-Línea 78: El detalle de cada problema (causa probable y solución propuesta) está en v1_notas.md .
+El detalle de cada problema (causa probable y solución propuesta) está en `v1_notas.md`.
 
 ### Mejoras Planificadas
+
+Estas mejoras se trabajaron en la iteración 2 (ver `iteraciones/iteracion_2/README.md`).
 
 **Hardware:**
 - [ ] Instalar el UPS con batería 18650 en el mat
@@ -116,5 +117,5 @@ Línea 78: El detalle de cada problema (causa probable y solución propuesta) es
 - `control.ino` - Código del control
 - `esquema_mat.png` - Esquema del circuito del mat
 - `esquema_control.png` - Esquema del circuito del control
-- `v1_fotos/` - Fotografías del prototipo 
--  v1_notas.md - Problemas identificados y mejoras planificadas
+- `v1_fotos/` - Fotografías del prototipo
+- `v1_notas.md` - Problemas identificados y mejoras planificadas
