@@ -24,28 +24,30 @@ Slides de la presentación final
 Máximo 15 páginas, formato profesional
 
 ### 2. Presentación Final
-`presentacion_avance3.pdf` o `.pptx`
+`presentacion_avance3.pdf`
 
 Duración: 10 minutos de presentación
+
+**Nota sobre el formato:** la presentación original en PowerPoint (`.pptx`) pesaba demasiado para subirla a GitHub, que rechaza archivos de más de 100 MB. Por eso en el repositorio se entrega la versión en PDF. En la versión en PowerPoint se reproduce el video de la demo, que en el PDF no se ve.
 
 ---
 
 ## Checklist de Entrega
 
 ### Documentos Obligatorios
-- [ ] Reporte final PDF (máx. 15 páginas)
-- [ ] Presentación PDF/PPTX
-- [ ] Manual de usuario (puede estar integrado en reporte)
+- [x] Reporte final PDF (máx. 15 páginas)
+- [x] Presentación PDF/PPTX
+- [x] Manual de usuario (integrado en el reporte, Anexo A)
 
 ### Contenido del Reporte
-- [ ] Contexto y problemática ODS
-- [ ] Solución propuesta (descripción técnica)
-- [ ] Proceso de diseño e iteraciones
-- [ ] Documentación técnica (resumen)
-- [ ] Resultados de testing y validación
-- [ ] Análisis de impacto ODS
-- [ ] Conclusiones y trabajo futuro
-- [ ] Referencias bibliográficas
+- [x] Contexto y problemática ODS
+- [x] Solución propuesta (descripción técnica)
+- [x] Proceso de diseño e iteraciones
+- [x] Documentación técnica (resumen)
+- [x] Resultados de testing y validación
+- [x] Análisis de impacto ODS
+- [x] Conclusiones y trabajo futuro
+- [x] Referencias bibliográficas
 
 ### Contenido de Presentación
 - [ ] Problema y contexto ODS (2 min)
