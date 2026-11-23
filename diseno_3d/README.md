@@ -57,14 +57,7 @@ Sin ángulos imposibles (overhangs controlados por debajo de 45° o manejo de pu
 
 ## Configuración de Impresión 3D (si fue utilizada)
 
-**Impresora:** [Modelo]  
-**Material:** [PLA/ABS/PETG]  
-**Calidad de capa:** 0.2mm  
-**Relleno:** 20-30%  
-**Soportes:** [Sí/No - dónde]  
-**Temperatura nozzle:** [°C]  
-**Temperatura cama:** [°C]  
-**Velocidad:** [mm/s]
+Impresora 3d fue contratada de forma externa
 
 **Tiempo estimado de impresión:** [3.5 a 5 horas]  
 **Peso de material:** 110g]
