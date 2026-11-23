@@ -1,162 +1,64 @@
 # Reporte Final del Proyecto
 
-## Formato del Documento
+Reporte final de **SafeRest**, sistema de alerta de caídas nocturnas para adultos mayores (ODS 3: Salud y Bienestar).
 
 **Archivo:** `reporte_final_v3.pdf`
 
-**Especificaciones:**
+> La versión 3 del prototipo que describe el reporte corresponde a la **iteración 2 (v2.0, versión final)** del repositorio, evaluada en el Avance #3.
+
+---
+
+## Formato del documento
+
 - Formato: PDF
-- Páginas: Máximo 15 páginas
+- Páginas: máximo 15, sin contar anexos
 - Tamaño: A4
-- Márgenes: 2.5 cm todos los lados
+- Márgenes: 2,5 cm
 - Fuente: Arial o Times New Roman, 11-12 pt
-- Interlineado: 1.5
-- Incluir numeración de páginas
-- Incluir encabezado con nombre del proyecto
+- Numeración de páginas y encabezado con el nombre del proyecto
+- Referencias en formato APA
 
 ---
 
-## Estructura Sugerida
+## Contenido del reporte
 
-### Portada (1 página)
-- Título del proyecto
-- Logo Universidad/Curso
-- Integrantes del equipo
-- Profesor
-- Fecha
-- ODS Seleccionado
-
-### Resumen Ejecutivo (0.5 páginas)
-- Problema abordado
-- Solución desarrollada
-- Resultados principales
-- Conclusión clave
-
-### 1. Introducción (1 página)
-- Contexto general
-- Problemática ODS específica
-- Objetivos del proyecto
-- Alcance
-
-### 2. Marco Teórico/Estado del Arte (1-1.5 páginas)
-- ODS seleccionado - descripción
-- Problemática local/nacional
-- Soluciones existentes (breve revisión)
-- Justificación de la propuesta
-
-### 3. Metodología (1 página)
-- Proceso de diseño seguido
-- Herramientas utilizadas
-- Enfoque de desarrollo
-
-### 4. Diseño y Desarrollo (3-4 páginas)
-
-#### 4.1 Arquitectura del Sistema
-- Diagrama de bloques general
-- Componentes principales
-
-#### 4.2 Hardware
-- Esquema del circuito (imagen)
-- Componentes seleccionados y justificación
-- BOM (tabla resumida)
-
-#### 4.3 Software
-- Arquitectura del software
-- Diagrama de flujo principal
-- Librerías utilizadas
-
-#### 4.4 Diseño Mecánico/3D
-- Renders del modelo (2-3 imágenes)
-- Consideraciones de diseño
-- Especificaciones
-
-### 5. Proceso de Iteraciones (2 páginas)
-- Versión 1: Concepto inicial
-- Versión 2: Primera iteración (Avance #2)
-- Versión 3: Versión final (Avance #3)
-- Tabla comparativa de mejoras
-- Justificación de cambios
-
-### 6. Testing y Validación (2-3 páginas)
-
-#### 6.1 Metodología de Testing
-- Protocolo aplicado
-- Perfil de usuarios
-
-#### 6.2 Resultados Cuantitativos
-- Tablas y gráficos
-- Análisis estadístico
-
-#### 6.3 Resultados Cualitativos
-- Feedback de usuarios
-- Observaciones
-
-#### 6.4 Validación de Impacto ODS
-- Métricas de impacto
-- Comparación baseline vs. resultado
-- Proyección de escalabilidad
-
-### 7. Conclusiones (1 página)
-- Logros alcanzados
-- Limitaciones identificadas
-- Aprendizajes del equipo
-- Trabajo futuro y mejoras potenciales
-
-### 8. Referencias (0.5 páginas)
-- Bibliografía
-- Datasheets consultados
-- Recursos web
-
-### Anexos (opcional, no cuenta para 15 páginas)
-- Código completo
-- Datos raw de testing
-- Documentación extendida
+| Sección | Tema |
+|---|---|
+| Portada | Título, integrantes, profesor, fecha y ODS |
+| Resumen ejecutivo | Problema, solución, resultados y conclusión |
+| 1. Introducción | Contexto, problemática, objetivos y alcance |
+| 2. Marco teórico | ODS 3, problemática en Chile, soluciones existentes y justificación |
+| 3. Metodología | Proceso de diseño y herramientas |
+| 4. Diseño y desarrollo | Arquitectura, hardware, software y diseño mecánico/3D |
+| 5. Proceso de iteraciones | Versiones 1, 2 y 3, tabla comparativa y justificación de cambios |
+| 6. Testing y validación | Protocolo, resultados cuantitativos y cualitativos, y validación de impacto |
+| 7. Conclusiones | Logros, limitaciones, aprendizajes y trabajo futuro |
+| 8. Referencias | Bibliografía y datasheets |
+| Anexos | Manual de uso y rutas del repositorio |
+| Declaración de IA | Uso de inteligencia artificial en el proyecto |
 
 ---
 
-## Calidad del Contenido
+## Dónde están los datos del reporte
 
-### Texto
-- Redacción clara y profesional
-- Sin errores ortográficos ni gramaticales
-- Evitar lenguaje coloquial
-- Uso correcto de terminología técnica
-
-### Figuras y Tablas
-- Todas las figuras numeradas: "Figura 1: ..."
-- Todas las tablas numeradas: "Tabla 1: ..."
-- Alta resolución y legibles
-- Referencias en el texto: "como se muestra en la Figura 3..."
-
-### Referencias
-Formato APA o IEEE consistente:
-```
-[1] Apellido, N. (Año). Título. Editorial.
-[2] Autor. "Título del artículo". Revista, vol. X, pp. XX-XX, Año.
-```
+| Dato del reporte | Carpeta del repositorio |
+|---|---|
+| Resultados de las pruebas | `testing/` |
+| Datos de testing y encuesta | `testing/datos/` |
+| Reportes de testing | `testing/reportes/` |
+| Lista de materiales (BOM) | `hardware/bom/` |
+| Fotos y videos del prototipo | `hardware/fotos/` |
+| Código final del mat y del control | `software/src/` |
+| Diseño 3D | `diseno_3d/` |
+| Iteraciones del prototipo | `iteraciones/` |
+| Fuentes y referencias | `FUENTES.md` |
 
 ---
 
-## Checklist de Calidad
+## Checklist antes de entregar
 
-Antes de entregar, verificar:
-
-**Contenido:**
-- [ ] Todas las secciones completas
-- [ ] Figuras de alta calidad
-- [ ] Tablas con datos reales
-- [ ] Referencias correctamente citadas
-- [ ] Máximo 15 páginas (sin contar anexos)
-
-**Formato:**
-- [ ] PDF exportado correctamente
-- [ ] Numeración de páginas
-- [ ] Encabezados consistentes
-- [ ] Márgenes correctos
-- [ ] Sin imágenes pixeladas
-
-**Revisión:**
-- [ ] Sin errores ortográficos
-- [ ] Redacción clara y coherente
-- [ ] Todos los integrantes revisaron
-- [ ] Cumple con rúbrica de evaluación
+- [ ] Máximo 15 páginas, sin contar anexos
+- [ ] Todas las figuras y tablas numeradas y citadas en el texto
+- [ ] Sin cuadros de pendientes ni texto resaltado
+- [ ] PDF exportado con el nombre `reporte_final_v3.pdf`
+- [ ] Todos los integrantes revisaron el documento
